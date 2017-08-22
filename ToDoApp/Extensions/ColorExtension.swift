@@ -9,6 +9,16 @@
 import Foundation
 import UIKit
 
+struct HexColors {
+    
+    static let defaultLightGreenColor = "#C6DA02"
+    static let defaultDarkGreenColor = "#79A700"
+    static let defaultDarkOrangenColor = "#F68B2C"
+    static let defaultLightOrangeColor = "#E2B400"
+    static let defaultRedColor = "#F5522D"
+    static let lightPinkColor = "#FF6E83"
+}
+
 extension UIColor {
     
     static func colorWithHexString (hex:String) -> UIColor {
@@ -31,30 +41,6 @@ extension UIColor {
         )
     }
 
-  
-    
-    static func defaultLightGreenColor () -> UIColor {
-        return UIColor.colorWithHexString(hex: "#C6DA02")
-    }
-    
-    static func defaultDarkGreenColor () -> UIColor {
-        return UIColor.colorWithHexString(hex: "#79A700")
-    }
-    
-    static func defaultDarkOrangenColor () -> UIColor {
-        return UIColor.colorWithHexString(hex: "#F68B2C")
-    }
-    
-    static func defaultLightOrangeColor () -> UIColor {
-        return UIColor.colorWithHexString(hex: "#E2B400")
-    }
-    
-    static func defaultRedColor () -> UIColor {
-        return UIColor.colorWithHexString(hex: "#F5522D")
-    }
-    
-    static func lightPinkColor () -> UIColor {
-        return UIColor.colorWithHexString(hex: "#FF6E83")
-    }
-    
+
+ 
 }

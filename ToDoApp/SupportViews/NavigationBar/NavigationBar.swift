@@ -25,7 +25,7 @@ class NavigationBar: UIView, SubViewProtocol {
         leftSideLeftButton.isHidden = true
         rightSideRightButton.isHidden = true
         rightSideLeftButton.isHidden = true
-        self.backgroundColor = UIColor.defaultLightGreenColor()
+        self.backgroundColor = UIColor.colorWithHexString(hex: HexColors.defaultLightGreenColor)
         topNavigationBarBackgroundView.backgroundColor = UIColor.clear
 
         

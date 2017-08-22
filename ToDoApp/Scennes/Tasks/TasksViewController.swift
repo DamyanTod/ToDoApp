@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol TasksViewControllerInput: class {
-
+    func reloadTableView()
+    func jitterAddButton()
 }
 
 class TasksViewController: UIViewController, TasksViewControllerInput {
@@ -58,6 +59,19 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
 
 }
 
+//MARK: Input Delegate
+extension TasksViewController {
+    func reloadTableView() {
+        contentView.tasksTableView.reloadData()
+    }
+    
+    func jitterAddButton() {
+        contentView.navigationBar.rightSideLeftButton.jitter()
+    }
+}
+
+
+
 //MARK: IBActions
 extension TasksViewController {
     
@@ -75,11 +89,29 @@ extension TasksViewController {
 extension TasksViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        guard let tasksCount = presenter.tasks?.count else {
+            return 0
+        }
+        
+        return tasksCount
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return TasksCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: TasksCell.nibName) as! TasksCell
+        
+        presenter.populateCell(cell: cell, indexPath : indexPath)
+        
+        //cell.delegate = self
+        cell.swipeEffect = YATableSwipeEffect.trail
+
+        
+        return cell
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

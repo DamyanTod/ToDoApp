@@ -21,7 +21,7 @@ enum ButtonType {
     
 }
 
-class Button: UIButton  {
+class Button: UIButton, ViewAnimationProtocol  {
     
     override func awakeFromNib() {
         super.awakeFromNib()

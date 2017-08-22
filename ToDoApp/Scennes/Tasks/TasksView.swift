@@ -30,7 +30,7 @@ class TasksView: UIView, SubViewProtocol {
     
     private func setUpTableView() {
         
-        //need to be registered cell
+        tasksTableView.register(UINib(nibName: TasksCell.nibName , bundle: nil), forCellReuseIdentifier: TasksCell.nibName)
         tasksTableView.tableFooterView = UIView(frame: CGRect.zero)
         tasksTableView.separatorStyle = .none
         tasksTableView.rowHeight = UITableViewAutomaticDimension
