@@ -25,14 +25,25 @@ class NavigationBar: UIView, SubViewProtocol {
         leftSideLeftButton.isHidden = true
         rightSideRightButton.isHidden = true
         rightSideLeftButton.isHidden = true
-        self.backgroundColor = UIColor.white
-        titleLabel.textColor = UIColor.white
+        self.backgroundColor = UIColor.defaultLightGreenColor()
+        topNavigationBarBackgroundView.backgroundColor = UIColor.clear
+
         
     }
     
-    func setLeftButtonToBackButton() {
+    func setLeftButton(type : ButtonType) {
         leftSideLeftButton.isHidden = false
-        leftSideLeftButton.setFRTButtonAppearance(type: .back)
+        leftSideLeftButton.setButtonAppearance(type: type)
+    }
+    
+    func setRightSideRightButton (type : ButtonType) {
+        rightSideRightButton.isHidden = false
+        rightSideRightButton.setButtonAppearance(type: type)
+    }
+    
+    func setRightSideLeftButton (type: ButtonType) {
+        rightSideLeftButton.isHidden = false
+        rightSideLeftButton.setButtonAppearance(type: type)
     }
 
     

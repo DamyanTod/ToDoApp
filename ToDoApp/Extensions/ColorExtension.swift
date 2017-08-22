@@ -11,55 +11,50 @@ import UIKit
 
 extension UIColor {
     
-    public convenience init?(hexString: String) {
-        let r, g, b, a: CGFloat
+    static func colorWithHexString (hex:String) -> UIColor {
+
+        let start = hex.index(hex.startIndex, offsetBy: 1)
+        let hexColor = hex.substring(from: start)
         
-        if hexString.hasPrefix("#") {
-            let start = hexString.index(hexString.startIndex, offsetBy: 1)
-            let hexColor = hexString.substring(from: start)
-            
-            if hexColor.characters.count == 8 {
-                let scanner = Scanner(string: hexColor)
-                var hexNumber: UInt64 = 0
-                
-                if scanner.scanHexInt64(&hexNumber) {
-                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
-                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
-                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
-                    a = CGFloat(hexNumber & 0x000000ff) / 255
-                    
-                    self.init(red: r, green: g, blue: b, alpha: a)
-                    return
-                }
-            }
+        if (hexColor.characters.count != 6) {
+            return UIColor.gray
         }
         
-        return nil
+        var rgbValue:UInt64 = 0
+        Scanner(string: hexColor).scanHexInt64(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
+
   
     
     static func defaultLightGreenColor () -> UIColor {
-        return UIColor(hexString: "#C6DA02")!
+        return UIColor.colorWithHexString(hex: "#C6DA02")
     }
     
     static func defaultDarkGreenColor () -> UIColor {
-        return UIColor(hexString: "#79A700")!
+        return UIColor.colorWithHexString(hex: "#79A700")
     }
     
     static func defaultDarkOrangenColor () -> UIColor {
-        return UIColor(hexString: "#F68B2C")!
+        return UIColor.colorWithHexString(hex: "#F68B2C")
     }
     
     static func defaultLightOrangeColor () -> UIColor {
-        return UIColor(hexString: "#E2B400")!
+        return UIColor.colorWithHexString(hex: "#E2B400")
     }
     
     static func defaultRedColor () -> UIColor {
-        return UIColor(hexString: "#F5522D")!
+        return UIColor.colorWithHexString(hex: "#F5522D")
     }
     
-    static func defaultPinkColor () -> UIColor {
-        return UIColor(hexString: "#FF6E83")!
+    static func lightPinkColor () -> UIColor {
+        return UIColor.colorWithHexString(hex: "#FF6E83")
     }
     
 }

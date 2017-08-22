@@ -41,6 +41,7 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        contentView.addLikeSubViewIn(parent: self.view)
         setupDelegates()
     }
     
@@ -53,6 +54,8 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
         contentView.navigationBar.rightSideLeftButton.addTarget(self, action: #selector(addButtonPressed), for: .touchUpInside)
         contentView.navigationBar.rightSideRightButton.addTarget(self, action: #selector(settingsButonPressed), for: .touchUpInside)
     }
+    
+
 }
 
 //MARK: IBActions

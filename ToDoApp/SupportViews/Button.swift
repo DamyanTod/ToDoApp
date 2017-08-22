@@ -16,6 +16,9 @@ enum ButtonType {
 
     case delete
     case back
+    case settings
+    case add
+    
 }
 
 class Button: UIButton  {
@@ -27,24 +30,28 @@ class Button: UIButton  {
         
     }
     
-    func setFRTButtonAppearance (type : ButtonType) {
+    func setButtonAppearance (type : ButtonType) {
         
         switch type {
             
+        case .add:
+            addImage("add_icon", color: UIColor.black)
+
+        case .settings:
+            addImage("settings_icon", color: UIColor.black)
+
         case .delete:
-            
-            let image = UIImage(named: "delete_icon")?.withRenderingMode(.alwaysTemplate)
-            self.setImage(image, for: .normal)
-            self.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7)
-            self.tintColor = UIColor.white
+            addImage("delete_icon", color: UIColor.black)
 
         case .back:
-            
-            let image = UIImage(named: "back_icon")?.withRenderingMode(.alwaysTemplate)
-            self.setImage(image, for: UIControlState.normal)
-            self.imageView?.tintColor = UIColor.white
-            
+            addImage("back_icon", color: UIColor.black)
         }
+    }
+    
+    private func addImage (_ imageName : String , color : UIColor) {
+        let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
+        self.setImage(image, for: UIControlState.normal)
+        self.imageView?.tintColor = color
     }
     
     

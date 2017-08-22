@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TasksView: UIView {
+class TasksView: UIView, SubViewProtocol {
     
     @IBOutlet weak var navigationBarContainer: UIView!
     let navigationBar = NavigationBar.fromNib()
@@ -24,6 +24,8 @@ class TasksView: UIView {
     
     private func setupNavigationBar () {
         navigationBar.addLikeSubViewIn(parent: navigationBarContainer)
+        navigationBar.setRightSideRightButton(type: .settings)
+        navigationBar.setRightSideLeftButton(type: .add)
     }
     
     private func setUpTableView() {
