@@ -26,8 +26,12 @@ class TasksCell: YMTableViewCell {
     
     @IBOutlet weak var labelTaskName: BaseLabel!
     @IBOutlet weak var labelTags: BaseLabel!
+    
+    @IBOutlet weak var labelDate: BaseLabel!
     @IBOutlet weak var viewForConnectElements: DrawCircleWithBottomAndUpperLine!
     
+    @IBOutlet var categoryIndicatiors: [UIView]!
+
     @IBOutlet weak var bottomSeparator: UIView!
     static let cellHeight:CGFloat = 70
     
@@ -43,7 +47,14 @@ class TasksCell: YMTableViewCell {
 //MARK: Public methods
 extension TasksCell: TasksCellProtocol {
     internal func setColor(color: String) {
-        print(color)
+        let color = UIColor.colorWithHexString(hex: color)
+        
+        for view in categoryIndicatiors {
+            view.backgroundColor = color
+            if view.frame.size.height == view.frame.size.width {
+                view.layer.cornerRadius = view.frame.width / 2
+            }
+        }
     }
 
     internal func setCategory(category: String) {
@@ -51,7 +62,7 @@ extension TasksCell: TasksCellProtocol {
     }
 
     internal func setDate(date: String) {
-        print(date)
+        labelDate.text = date
     }
 
     internal func setTitle(title: String) {

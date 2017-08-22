@@ -32,6 +32,7 @@ class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
         }
     }
     
+    fileprivate let dateFormatter = DateFormatter()
 
     required init(with interactor: TasksInteractorInput, router: TasksRouterInput) {
         
@@ -46,6 +47,10 @@ class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
         let task6 = Task(title: "task6", category: "homework", categoryColor: HexColors.lightPinkColor, completionDate: Date(), isDone: true)
         
         tasks = [task1,task2,task3,task4,task5,task6]
+
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "en_US")
         
     }
 
@@ -56,18 +61,20 @@ extension TasksPresenter {
     func populateCell(cell: TasksCellProtocol, indexPath: IndexPath) {
         
         if let tasks = tasks {
-            cell.setDate(date: tasks[indexPath.row].completionDate.description)
+            cell.setDate(date: dateFormatter.string(from: tasks[indexPath.row].completionDate))
             cell.setTitle(title: tasks[indexPath.row].title)
             cell.setColor(color: tasks[indexPath.row].categoryColor)
             cell.setCategory(category: tasks[indexPath.row].category)
             
             cell.displayBottomLine(isNeeded: indexPath.row != tasks.count - 1)
             cell.displayUpperLine(isNeeded: indexPath.row != 0)
-            cell.displayItem(state: tasks[indexPath.row].isDone ? .filledWithGreenColor : .clock)
+            cell.displayItem(state: tasks[indexPath.row].isDone ? .filled : .clock)
 
         }
 
     }
+    
+
 }
 
 

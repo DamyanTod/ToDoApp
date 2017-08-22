@@ -11,7 +11,7 @@ import UIKit
 enum CircleState {
     
     case filledWithDefaultAppColor
-    case filledWithGreenColor
+    case filled
     case clock
     case addTask
 }
@@ -94,7 +94,7 @@ class DrawCircleWithBottomAndUpperLine: UIView {
         case .filledWithDefaultAppColor:
             context.fillEllipse(in: CGRect(x: bounds.midX - radius, y:bounds.midY - radius, width: radius * 2, height: radius * 2))
             
-        case .filledWithGreenColor:
+        case .filled:
             context.fillEllipse(in: CGRect(x: bounds.midX - radius, y:bounds.midY - radius, width: radius * 2, height: radius * 2))
 
         case .addTask:
@@ -130,8 +130,8 @@ class DrawCircleWithBottomAndUpperLine: UIView {
             return UIColor.black.cgColor
         case .filledWithDefaultAppColor:
             return UIColor.colorWithHexString(hex: HexColors.defaultLightGreenColor).cgColor
-        case .filledWithGreenColor:
-            return UIColor.colorWithHexString(hex: HexColors.defaultLightGreenColor).cgColor
+        case .filled:
+            return UIColor.black.cgColor
         case .addTask:
             return UIColor.colorWithHexString(hex: HexColors.defaultLightGreenColor).cgColor
         }
@@ -144,7 +144,7 @@ class DrawCircleWithBottomAndUpperLine: UIView {
             return min(bounds.midX,bounds.midY) * 0.4 - GlobalNumbers.defaultAppLineWidth
         case .filledWithDefaultAppColor:
             return min(bounds.midX,bounds.midY) * 0.25 - GlobalNumbers.defaultAppLineWidth
-        case .filledWithGreenColor:
+        case .filled:
             return min(bounds.midX,bounds.midY) * 0.25 - GlobalNumbers.defaultAppLineWidth
         case .addTask:
             return min(bounds.midX,bounds.midY) * 0.3 - GlobalNumbers.defaultAppLineWidth
