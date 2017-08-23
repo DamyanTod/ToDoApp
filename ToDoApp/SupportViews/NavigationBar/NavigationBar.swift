@@ -33,17 +33,17 @@ class NavigationBar: UIView, SubViewProtocol {
     
     func setLeftButton(type : ButtonType) {
         leftSideLeftButton.isHidden = false
-        leftSideLeftButton.setButtonAppearance(type: type)
+        leftSideLeftButton.setButtonAppearance(type: type,text : nil)
     }
     
     func setRightSideRightButton (type : ButtonType) {
         rightSideRightButton.isHidden = false
-        rightSideRightButton.setButtonAppearance(type: type)
+        rightSideRightButton.setButtonAppearance(type: type,text : nil)
     }
     
     func setRightSideLeftButton (type: ButtonType) {
         rightSideLeftButton.isHidden = false
-        rightSideLeftButton.setButtonAppearance(type: type)
+        rightSideLeftButton.setButtonAppearance(type: type,text : nil)
     }
 
     

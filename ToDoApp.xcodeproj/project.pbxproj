@@ -51,6 +51,14 @@
 		4489438A1F4C562B00BF9979 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448943891F4C562B00BF9979 /* Appearance.swift */; };
 		44D014FE1F4DC5A8009A5D61 /* DetailToDoFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D014FD1F4DC5A8009A5D61 /* DetailToDoFooter.xib */; };
 		44D015001F4DC5C3009A5D61 /* DetailToDoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D014FF1F4DC5C3009A5D61 /* DetailToDoFooter.swift */; };
+		44D015081F4DE4DA009A5D61 /* DatePickerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015031F4DE4DA009A5D61 /* DatePickerConfigurator.swift */; };
+		44D0150A1F4DE4DA009A5D61 /* DatePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015051F4DE4DA009A5D61 /* DatePickerPresenter.swift */; };
+		44D0150B1F4DE4DA009A5D61 /* DatePickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015061F4DE4DA009A5D61 /* DatePickerRouter.swift */; };
+		44D0150C1F4DE4DA009A5D61 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015071F4DE4DA009A5D61 /* DatePickerViewController.swift */; };
+		44D0150E1F4DE51F009A5D61 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0150D1F4DE51F009A5D61 /* DatePickerView.swift */; };
+		44D015101F4DE539009A5D61 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D0150F1F4DE539009A5D61 /* DatePickerView.xib */; };
+		44D015121F4DE9A2009A5D61 /* LocalizeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015111F4DE9A2009A5D61 /* LocalizeStrings.swift */; };
+		44D015141F4DEEC6009A5D61 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015131F4DEEC6009A5D61 /* Transitions.swift */; };
 		B951CB1194D983FA3C51388F /* Pods_ToDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5635C2C5184511C43E38EAF6 /* Pods_ToDoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +115,14 @@
 		448943891F4C562B00BF9979 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		44D014FD1F4DC5A8009A5D61 /* DetailToDoFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailToDoFooter.xib; sourceTree = "<group>"; };
 		44D014FF1F4DC5C3009A5D61 /* DetailToDoFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailToDoFooter.swift; sourceTree = "<group>"; };
+		44D015031F4DE4DA009A5D61 /* DatePickerConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerConfigurator.swift; sourceTree = "<group>"; };
+		44D015051F4DE4DA009A5D61 /* DatePickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerPresenter.swift; sourceTree = "<group>"; };
+		44D015061F4DE4DA009A5D61 /* DatePickerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerRouter.swift; sourceTree = "<group>"; };
+		44D015071F4DE4DA009A5D61 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		44D0150D1F4DE51F009A5D61 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		44D0150F1F4DE539009A5D61 /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		44D015111F4DE9A2009A5D61 /* LocalizeStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizeStrings.swift; sourceTree = "<group>"; };
+		44D015131F4DEEC6009A5D61 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		5635C2C5184511C43E38EAF6 /* Pods_ToDoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2900F6AB91D4B4DF4F800A /* Pods-ToDoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				4416E2591F4CAEBC008A1108 /* GlobalNumbers.swift */,
+				44D015111F4DE9A2009A5D61 /* LocalizeStrings.swift */,
+				44D015131F4DEEC6009A5D61 /* Transitions.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -214,6 +232,7 @@
 		4435529B1F4C35F8009A0C7B /* Scennes */ = {
 			isa = PBXGroup;
 			children = (
+				44D015021F4DE4BB009A5D61 /* DatePicker */,
 				44385CD31F4D7B3900697708 /* DetailTask */,
 				446F7CB71F4C39E8001B6A55 /* Tasks */,
 			);
@@ -319,6 +338,19 @@
 			path = DetailToDoFooter;
 			sourceTree = "<group>";
 		};
+		44D015021F4DE4BB009A5D61 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				44D015031F4DE4DA009A5D61 /* DatePickerConfigurator.swift */,
+				44D015051F4DE4DA009A5D61 /* DatePickerPresenter.swift */,
+				44D015061F4DE4DA009A5D61 /* DatePickerRouter.swift */,
+				44D015071F4DE4DA009A5D61 /* DatePickerViewController.swift */,
+				44D0150D1F4DE51F009A5D61 /* DatePickerView.swift */,
+				44D0150F1F4DE539009A5D61 /* DatePickerView.xib */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
 		E3B3EB91492B84A0E02E8F86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +431,7 @@
 				44385CE11F4D7BE900697708 /* DetailTaskView.xib in Resources */,
 				4435528A1F4C357D009A0C7B /* Main.storyboard in Resources */,
 				4489437E1F4C536A00BF9979 /* TasksView.xib in Resources */,
+				44D015101F4DE539009A5D61 /* DatePickerView.xib in Resources */,
 				44628A601F4C62BD00FA00D1 /* NavigationBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +497,7 @@
 				448943881F4C55D500BF9979 /* CGFloatExtension.swift in Sources */,
 				448943841F4C551700BF9979 /* BaseLabel.swift in Sources */,
 				448943861F4C557D00BF9979 /* FontExtension.swift in Sources */,
+				44D0150E1F4DE51F009A5D61 /* DatePickerView.swift in Sources */,
 				44385CDF1F4D7BBC00697708 /* DetailTaskView.swift in Sources */,
 				4416E25A1F4CAEBC008A1108 /* GlobalNumbers.swift in Sources */,
 				44628A631F4C656C00FA00D1 /* SubViewProtocol.swift in Sources */,
@@ -475,6 +509,7 @@
 				4416E2411F4C9AA9008A1108 /* Task.swift in Sources */,
 				446F7CC11F4C3A00001B6A55 /* TasksViewController.swift in Sources */,
 				446F7CBE1F4C3A00001B6A55 /* TasksInteractor.swift in Sources */,
+				44D015141F4DEEC6009A5D61 /* Transitions.swift in Sources */,
 				4435528D1F4C357D009A0C7B /* ToDoApp.xcdatamodeld in Sources */,
 				446F7CBF1F4C3A00001B6A55 /* TasksPresenter.swift in Sources */,
 				4416E2441F4CA215008A1108 /* TasksCell.swift in Sources */,
@@ -486,12 +521,17 @@
 				44385CDC1F4D7B8200697708 /* DetailTaskRouter.swift in Sources */,
 				4416E2561F4CABB9008A1108 /* YMTwoButtonSwipeView.m in Sources */,
 				44385CD91F4D7B8200697708 /* DetailTaskConfigurator.swift in Sources */,
+				44D015121F4DE9A2009A5D61 /* LocalizeStrings.swift in Sources */,
 				446F7CBD1F4C3A00001B6A55 /* TasksConfigurator.swift in Sources */,
 				44385CDB1F4D7B8200697708 /* DetailTaskPresenter.swift in Sources */,
 				44385CDA1F4D7B8200697708 /* DetailTaskInteractor.swift in Sources */,
+				44D0150B1F4DE4DA009A5D61 /* DatePickerRouter.swift in Sources */,
 				448943801F4C542500BF9979 /* ColorExtension.swift in Sources */,
 				44D015001F4DC5C3009A5D61 /* DetailToDoFooter.swift in Sources */,
 				44385CDD1F4D7B8200697708 /* DetailTaskViewController.swift in Sources */,
+				44D0150C1F4DE4DA009A5D61 /* DatePickerViewController.swift in Sources */,
+				44D015081F4DE4DA009A5D61 /* DatePickerConfigurator.swift in Sources */,
+				44D0150A1F4DE4DA009A5D61 /* DatePickerPresenter.swift in Sources */,
 				446F7CC71F4C3BDC001B6A55 /* TasksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

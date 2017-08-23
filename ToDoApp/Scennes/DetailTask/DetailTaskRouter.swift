@@ -13,10 +13,11 @@ protocol DetailTaskRouterInput {
     
     func navigateToSomewhere()
     func navigateToPreviousController()
+    func navigateToDatePicker(_ task : Task?)
 }
 
 class DetailTaskRouter: DetailTaskRouterInput {
-    
+
     weak var viewController: DetailTaskViewController?
     
     // MARK: - Navigation
@@ -45,6 +46,13 @@ class DetailTaskRouter: DetailTaskRouterInput {
     
     func navigateToPreviousController() {
         let _ = viewController?.navigationController?.popViewController(animated: true)
+    }
+    
+    func navigateToDatePicker(_ task : Task?) {
+        if let viewController = UIStoryboard(name: Transitions.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Transitions.datePickerController) as? DatePickerViewController {
+            viewController.presenter.task = task
+            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
 }

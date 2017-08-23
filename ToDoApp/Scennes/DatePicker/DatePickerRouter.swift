@@ -1,23 +1,25 @@
 //
-//  TasksRouter.swift
+//  DatePickerRouter.swift
 //  ToDoApp
 //
-//  Created by El Capitan on 8/22/17.
+//  Created by El Capitan on 8/23/17.
 //  Copyright (c) 2017 DamyanTod. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-protocol TasksRouterInput {
+protocol DatePickerRouterInput {
     
     func navigateToSomewhere()
-    func navigateToDetailTasks(task : Task?)
+    func navigateToPreviousController()
+ 
+ 
 }
 
-class TasksRouter: TasksRouterInput {
+class DatePickerRouter: DatePickerRouterInput {
     
-    weak var viewController: TasksViewController?
+    weak var viewController: DatePickerViewController?
     
     // MARK: - Navigation
     
@@ -43,11 +45,8 @@ class TasksRouter: TasksRouterInput {
         // destinationViewController.delegate = self.viewController
     }
     
-    func navigateToDetailTasks(task : Task?) {
-        if let viewController = UIStoryboard(name: Transitions.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Transitions.detailTaskController) as? DetailTaskViewController {
-            viewController.presenter.task = task
-            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
-        }
+    func navigateToPreviousController() {
+        let _ = viewController?.navigationController?.popViewController(animated: true)
     }
     
 }

@@ -10,6 +10,8 @@ import Foundation
 
 protocol DetailTaskPresenterInput: class {
     func backButtonPressed()
+    func createTask()
+    func navigateToDatePicker()
 }
 
 class DetailTaskPresenter: DetailTaskPresenterInput, DetailTaskInteractorOutput {
@@ -32,13 +34,21 @@ class DetailTaskPresenter: DetailTaskPresenterInput, DetailTaskInteractorOutput 
         self.router = router
     }
     
-    
-
 }
 
 //MARK: View inputs
 extension DetailTaskPresenter {
     func backButtonPressed() {
         router.navigateToPreviousController()
+    }
+    
+    func navigateToDatePicker() {
+        router.navigateToDatePicker(task)
+    }
+    
+    func createTask() {
+        if task == nil {
+            task = Task(title: "", categories: "", categoryColor: HexColors.defaultDarkGreenColor, completionDate: Date(), isDone: false)
+        }
     }
 }

@@ -43,8 +43,9 @@ class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput 
         contentView.addLikeSubViewIn(parent: self.view)
         addTargets()
         showDeleteButtonIfNeeded()
+        presenter.createTask()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         contentView.setupFooter()
@@ -52,6 +53,7 @@ class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput 
     
     private func addTargets () {
         contentView.navigationBar.leftSideLeftButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+        contentView.footer.timeBtn.addTarget(self, action: #selector(timeButtonPressed), for: .touchUpInside)
         
     }
     
@@ -83,6 +85,10 @@ extension DetailTaskViewController {
     
     @IBAction func deleteButtonPressed (sender: UIButton) {
         //TODO: CoreDate implementation
+    }
+    
+    @IBAction func timeButtonPressed (sender: UIButton) {
+        presenter.navigateToDatePicker()
     }
     
 }
