@@ -46,5 +46,23 @@
             </objects>
             <point key="canvasLocation" x="104.8" y="777.66116941529242"/>
         </scene>
+        <!--Detail Task View Controller-->
+        <scene sceneID="ids-if-CQM">
+            <objects>
+                <viewController storyboardIdentifier="DetailTaskViewController" id="GCV-gu-jCr" customClass="DetailTaskViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ydT-0N-iwN"/>
+                        <viewControllerLayoutGuide type="bottom" id="A3X-99-sRj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QYJ-S3-3Ay">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="raR-hj-25W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998" y="124"/>
+        </scene>
     </scenes>
 </document>

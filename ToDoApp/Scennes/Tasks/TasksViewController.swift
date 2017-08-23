@@ -83,7 +83,7 @@ extension TasksViewController {
 extension TasksViewController {
     
     @IBAction func addButtonPressed (sender : Button) {
-        //TODO: navigate to detail screen
+        presenter.pushToDetailTaskController(task: nil)
     }
     
     @IBAction func settingsButonPressed (sender : Button) {
@@ -142,7 +142,7 @@ extension TasksViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: navigate to detail screen
+        presenter.pushToDetailTaskController(task: presenter.tasks?[indexPath.row])
     }
     
 }

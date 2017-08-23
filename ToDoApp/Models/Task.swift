@@ -11,7 +11,7 @@ import Foundation
 struct Task {
     
     var title: String
-    var category: String
+    var categories: String
     var categoryColor: String
     var completionDate: Date
     var isDone : Bool

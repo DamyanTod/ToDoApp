@@ -13,7 +13,7 @@ import UIKit
 protocol TasksCellProtocol {
     
     func setTitle(title:String)
-    func setCategory(category:String)
+    func setCategories(categories:String)
     func setDate(date:String)
     func setColor(color:String)
     func displayBottomLine(isNeeded : Bool)
@@ -57,8 +57,8 @@ extension TasksCell: TasksCellProtocol {
         }
     }
 
-    internal func setCategory(category: String) {
-        labelTags.text = category
+    internal func setCategories(categories: String) {
+        labelTags.text = categories
     }
 
     internal func setDate(date: String) {

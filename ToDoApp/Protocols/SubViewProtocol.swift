@@ -16,7 +16,7 @@ protocol SubViewProtocol {
 extension SubViewProtocol where Self: UIView {
     
     func addLikeSubViewIn(parent : UIView) {
-        self.frame = parent.frame
+        self.frame = CGRect(x: 0, y: 0, width: parent.frame.size.width, height: parent.frame.size.height)
         parent.addSubview(self)
     }
     

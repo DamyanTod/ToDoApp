@@ -1,23 +1,23 @@
 //
-//  TasksRouter.swift
+//  DetailTaskRouter.swift
 //  ToDoApp
 //
-//  Created by El Capitan on 8/22/17.
+//  Created by El Capitan on 8/23/17.
 //  Copyright (c) 2017 DamyanTod. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-protocol TasksRouterInput {
+protocol DetailTaskRouterInput {
     
     func navigateToSomewhere()
-    func navigateToDetailTasks(task : Task?)
+    func navigateToPreviousController()
 }
 
-class TasksRouter: TasksRouterInput {
+class DetailTaskRouter: DetailTaskRouterInput {
     
-    weak var viewController: TasksViewController?
+    weak var viewController: DetailTaskViewController?
     
     // MARK: - Navigation
     
@@ -43,14 +43,8 @@ class TasksRouter: TasksRouterInput {
         // destinationViewController.delegate = self.viewController
     }
     
-    func navigateToDetailTasks(task : Task?) {
-        
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailTaskViewController") as? DetailTaskViewController {
-            viewController.presenter.task = task
-            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
-        }
-
-        
+    func navigateToPreviousController() {
+        let _ = viewController?.navigationController?.popViewController(animated: true)
     }
     
 }
