@@ -48,6 +48,11 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
         filterTasks(status: contentView.tableViewHeader.getStatus())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        contentView.tasksTableView.reloadData()
+    }
+    
     private func setupDelegates () {
         contentView.tasksTableView.dataSource = self
         contentView.tasksTableView.delegate = self

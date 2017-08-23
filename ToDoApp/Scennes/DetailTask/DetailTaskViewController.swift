@@ -54,6 +54,9 @@ class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput 
     private func addTargets () {
         contentView.navigationBar.leftSideLeftButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
         contentView.footer.timeBtn.addTarget(self, action: #selector(timeButtonPressed), for: .touchUpInside)
+        for button in contentView.footer.colorButtons {
+            button.addTarget(self, action: #selector(colorButtonPressed), for: .touchDown)
+        }
         
     }
     
@@ -89,6 +92,15 @@ extension DetailTaskViewController {
     
     @IBAction func timeButtonPressed (sender: UIButton) {
         presenter.navigateToDatePicker()
+    }
+    
+    @IBAction func colorButtonPressed (sender: UIButton) {
+        //TODO: need to be updated Core data
+        guard let task = presenter.task else {
+            return
+        }
+        task.categoryColor = contentView.footer.colors[sender.tag]
+        contentView.footer.indicatorColorView.backgroundColor = UIColor.colorWithHexString(hex: task.categoryColor)
     }
     
 }

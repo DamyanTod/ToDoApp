@@ -39,12 +39,9 @@ class DetailToDoFooter : UIView, SubViewProtocol {
 
         makeCircleView(view: indicatorColorView, hexColor: colors[0])
         
-        
         if colorButtons.count == colors.count {
-            var index = 0
             for button in colorButtons {
-                makeCircleView(view: button, hexColor: colors[index])
-                index += 1
+                makeCircleView(view: button, hexColor: colors[button.tag])
             }
         }
         
