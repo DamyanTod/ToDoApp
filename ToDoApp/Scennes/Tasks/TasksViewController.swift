@@ -44,6 +44,8 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
         
         contentView.addLikeSubViewIn(parent: self.view)
         setupDelegates()
+        addTargets()
+        filterTasks(segmentControl: contentView.tableViewHeader.taskStatusSegmentController)
     }
     
     private func setupDelegates () {
@@ -54,9 +56,15 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
     private func addTargets () {
         contentView.navigationBar.rightSideLeftButton.addTarget(self, action: #selector(addButtonPressed), for: .touchUpInside)
         contentView.navigationBar.rightSideRightButton.addTarget(self, action: #selector(settingsButonPressed), for: .touchUpInside)
+        contentView.tableViewHeader.taskStatusSegmentController.addTarget(self, action: #selector(taskStatusChanged), for: .valueChanged)
     }
     
-
+    fileprivate func filterTasks (segmentControl : UISegmentedControl) {
+        if let title = segmentControl.titleForSegment(at: segmentControl.selectedSegmentIndex),
+            let status = SegmentStatus(rawValue: title) {
+            presenter.filterTasks(value : status)
+        }
+    }
 }
 
 //MARK: Input Delegate
@@ -81,6 +89,10 @@ extension TasksViewController {
     
     @IBAction func settingsButonPressed (sender : Button) {
         //TODO: navigate to settings screen
+    }
+    
+    @IBAction func taskStatusChanged (sender : UISegmentedControl) {
+        filterTasks(segmentControl: sender)
     }
 
 }
@@ -109,9 +121,15 @@ extension TasksViewController : UITableViewDataSource, UITableViewDelegate {
         //cell.delegate = self
         cell.swipeEffect = YATableSwipeEffect.trail
 
-        
         return cell
-
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return contentView.tableViewHeader
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return TasksHeaderView.height
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

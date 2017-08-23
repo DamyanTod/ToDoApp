@@ -22,6 +22,8 @@
 		4435528D1F4C357D009A0C7B /* ToDoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4435528B1F4C357D009A0C7B /* ToDoApp.xcdatamodeld */; };
 		4435528F1F4C357D009A0C7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4435528E1F4C357D009A0C7B /* Assets.xcassets */; };
 		443552921F4C357D009A0C7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443552901F4C357D009A0C7B /* LaunchScreen.storyboard */; };
+		44385CD01F4D4B3300697708 /* TasksHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CCF1F4D4B3300697708 /* TasksHeaderView.swift */; };
+		44385CD21F4D4B3F00697708 /* TasksHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44385CD11F4D4B3F00697708 /* TasksHeaderView.xib */; };
 		44628A5E1F4C625B00FA00D1 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44628A5D1F4C625B00FA00D1 /* NavigationBar.swift */; };
 		44628A601F4C62BD00FA00D1 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44628A5F1F4C62BD00FA00D1 /* NavigationBar.xib */; };
 		44628A631F4C656C00FA00D1 /* SubViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44628A621F4C656C00FA00D1 /* SubViewProtocol.swift */; };
@@ -66,6 +68,8 @@
 		4435528E1F4C357D009A0C7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		443552911F4C357D009A0C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443552931F4C357D009A0C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44385CCF1F4D4B3300697708 /* TasksHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksHeaderView.swift; sourceTree = "<group>"; };
+		44385CD11F4D4B3F00697708 /* TasksHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasksHeaderView.xib; sourceTree = "<group>"; };
 		44628A5D1F4C625B00FA00D1 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		44628A5F1F4C62BD00FA00D1 /* NavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		44628A621F4C656C00FA00D1 /* SubViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewProtocol.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 		4435529D1F4C3629009A0C7B /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
+				44385CCE1F4D4B0800697708 /* TasksHeaderView */,
 				4416E2491F4CAB7A008A1108 /* SwipeableCell */,
 				4416E2421F4CA1FC008A1108 /* TasksCell */,
 				44628A5C1F4C623D00FA00D1 /* NavigationBar */,
@@ -225,6 +230,15 @@
 				448943871F4C55D500BF9979 /* CGFloatExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		44385CCE1F4D4B0800697708 /* TasksHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				44385CCF1F4D4B3300697708 /* TasksHeaderView.swift */,
+				44385CD11F4D4B3F00697708 /* TasksHeaderView.xib */,
+			);
+			path = TasksHeaderView;
 			sourceTree = "<group>";
 		};
 		44628A5C1F4C623D00FA00D1 /* NavigationBar */ = {
@@ -331,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44385CD21F4D4B3F00697708 /* TasksHeaderView.xib in Resources */,
 				443552921F4C357D009A0C7B /* LaunchScreen.storyboard in Resources */,
 				4435528F1F4C357D009A0C7B /* Assets.xcassets in Resources */,
 				4416E2461F4CA237008A1108 /* TasksCell.xib in Resources */,
@@ -415,6 +430,7 @@
 				4416E2441F4CA215008A1108 /* TasksCell.swift in Sources */,
 				443552851F4C357D009A0C7B /* AppDelegate.swift in Sources */,
 				448943821F4C545500BF9979 /* Button.swift in Sources */,
+				44385CD01F4D4B3300697708 /* TasksHeaderView.swift in Sources */,
 				4489438A1F4C562B00BF9979 /* Appearance.swift in Sources */,
 				446F7CC01F4C3A00001B6A55 /* TasksRouter.swift in Sources */,
 				4416E2561F4CABB9008A1108 /* YMTwoButtonSwipeView.m in Sources */,

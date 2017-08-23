@@ -13,6 +13,8 @@ class TasksView: UIView, SubViewProtocol {
     @IBOutlet weak var navigationBarContainer: UIView!
     let navigationBar = NavigationBar.fromNib()
     
+    let tableViewHeader = TasksHeaderView.fromNib()
+    
     @IBOutlet weak var tasksTableView: UITableView!
     
     override func awakeFromNib() {

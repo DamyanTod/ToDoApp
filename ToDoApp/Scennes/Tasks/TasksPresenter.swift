@@ -11,7 +11,7 @@ import Foundation
 protocol TasksPresenterInput: class {
     
     func populateCell(cell: TasksCellProtocol, indexPath : IndexPath)
-
+    func filterTasks(value : SegmentStatus)
 }
 
 class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
@@ -32,6 +32,8 @@ class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
         }
     }
     
+    fileprivate var archivedTasks:[Task]?
+    
     fileprivate let dateFormatter = DateFormatter()
 
     required init(with interactor: TasksInteractorInput, router: TasksRouterInput) {
@@ -47,6 +49,7 @@ class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
         let task6 = Task(title: "task6", category: "homework", categoryColor: HexColors.lightPinkColor, completionDate: Date(), isDone: true)
         
         tasks = [task1,task2,task3,task4,task5,task6]
+        archivedTasks = tasks
 
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
@@ -72,6 +75,20 @@ extension TasksPresenter {
 
         }
 
+    }
+    
+    func filterTasks(value: SegmentStatus) {
+        //TODO: need to take the tasks with query from CoreData
+        switch value {
+        case .available:
+            if tasks != nil {
+                self.tasks = archivedTasks!.filter({ $0.isDone == false })
+            }
+        case .completed:
+            if tasks != nil {
+                self.tasks = archivedTasks!.filter({ $0.isDone == true })
+            }
+        }
     }
     
 
