@@ -18,6 +18,8 @@ enum ButtonType {
     case back
     case settings
     case add
+    case edit
+    case positiveAnswerButton
     
 }
 
@@ -30,7 +32,11 @@ class Button: UIButton, ViewAnimationProtocol  {
         
     }
     
-    func setButtonAppearance (type : ButtonType) {
+    func setButtonAppearance (type : ButtonType, text : String?) {
+        
+        let title = text ?? ""
+        
+        self.setTitle(title, for: .normal)
         
         switch type {
             
@@ -45,6 +51,15 @@ class Button: UIButton, ViewAnimationProtocol  {
 
         case .back:
             addImage("back_icon", color: UIColor.black)
+            
+        case .edit:
+            addImage("edit_icon", color: UIColor.black)
+            
+        case .positiveAnswerButton:
+            self.setTitleColor(UIColor.black, for: .normal)
+            self.backgroundColor = UIColor.colorWithHexString(hex: HexColors.defaultLightGreenColor)
+            self.layer.cornerRadius = self.frame.height/2
+            self.clipsToBounds = true
         }
     }
     

@@ -8,12 +8,26 @@
 
 import Foundation
 
-struct Task {
+class Task {
     
     var title: String
-    var category: String
+    var categories: String
     var categoryColor: String
     var completionDate: Date
     var isDone : Bool
     
+    init(title : String, categories : String , categoryColor: String , completionDate : Date, isDone : Bool) {
+        self.title = title
+        self.categories = categories
+        self.categoryColor = categoryColor
+        self.completionDate = completionDate
+        self.isDone = isDone
+    }
+    
+    func getCategoriesAsArray () -> [String]? {
+        if categories != "" {
+            return categories.components(separatedBy: ", ")
+        }
+        return nil
+    }
 }

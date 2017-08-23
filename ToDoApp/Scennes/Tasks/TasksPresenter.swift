@@ -14,6 +14,7 @@ protocol TasksPresenterInput: class {
     func filterTasks(value : SegmentStatus)
     func removeItem(_ index: Int)
     func changeTaskStateToDone(_ index : Int)
+    func pushToDetailTaskController(task : Task?)
 }
 
 class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
@@ -31,26 +32,20 @@ class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
 
     fileprivate var archivedTasks:[Task]?
     
-    fileprivate let dateFormatter = DateFormatter()
-
     required init(with interactor: TasksInteractorInput, router: TasksRouterInput) {
         
         self.interactor = interactor
         self.router = router
         
-        let task1 = Task(title: "task1", category: "job", categoryColor: HexColors.defaultDarkGreenColor, completionDate: Date(), isDone: false)
-        let task2 = Task(title: "task2", category: "school", categoryColor: HexColors.defaultRedColor, completionDate: Date(), isDone: false)
-        let task3 = Task(title: "task3", category: "home", categoryColor: HexColors.defaultDarkGreenColor, completionDate: Date(), isDone: false)
-        let task4 = Task(title: "task4", category: "car", categoryColor: HexColors.defaultDarkOrangenColor, completionDate: Date(), isDone: false)
-        let task5 = Task(title: "task5", category: "family", categoryColor: HexColors.defaultLightOrangeColor, completionDate: Date(), isDone: false)
-        let task6 = Task(title: "task6", category: "homework", categoryColor: HexColors.lightPinkColor, completionDate: Date(), isDone: true)
+        let task1 = Task(title: "task1", categories: "job", categoryColor: HexColors.defaultDarkGreenColor, completionDate: Date(), isDone: false)
+        let task2 = Task(title: "task2", categories: "school", categoryColor: HexColors.defaultRedColor, completionDate: Date(), isDone: false)
+        let task3 = Task(title: "task3", categories: "home", categoryColor: HexColors.defaultDarkGreenColor, completionDate: Date(), isDone: false)
+        let task4 = Task(title: "task4", categories: "car", categoryColor: HexColors.defaultDarkOrangenColor, completionDate: Date(), isDone: false)
+        let task5 = Task(title: "task5", categories: "family", categoryColor: HexColors.defaultLightOrangeColor, completionDate: Date(), isDone: false)
+        let task6 = Task(title: "task6", categories: "homework", categoryColor: HexColors.lightPinkColor, completionDate: Date(), isDone: true)
         
         tasks = [task1,task2,task3,task4,task5,task6]
         archivedTasks = tasks
-
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-        dateFormatter.locale = Locale(identifier: "en_US")
         
     }
     
@@ -71,10 +66,10 @@ extension TasksPresenter {
     func populateCell(cell: TasksCellProtocol, indexPath: IndexPath) {
         
         if let tasks = tasks {
-            cell.setDate(date: dateFormatter.string(from: tasks[indexPath.row].completionDate))
+            cell.setDate(date: tasks[indexPath.row].completionDate.getUserLocalDate())
             cell.setTitle(title: tasks[indexPath.row].title)
             cell.setColor(color: tasks[indexPath.row].categoryColor)
-            cell.setCategory(category: tasks[indexPath.row].category)
+            cell.setCategories(categories: tasks[indexPath.row].categories)
             
             cell.displayBottomLine(isNeeded: indexPath.row != tasks.count - 1)
             cell.displayUpperLine(isNeeded: indexPath.row != 0)
@@ -143,7 +138,10 @@ extension TasksPresenter {
         tasks?[index].isDone = true
         
     }
-
+    
+    func pushToDetailTaskController(task : Task?) {
+        router.navigateToDetailTasks(task : task)
+    }
 }
 
 

@@ -48,6 +48,11 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
         filterTasks(status: contentView.tableViewHeader.getStatus())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        contentView.tasksTableView.reloadData()
+    }
+    
     private func setupDelegates () {
         contentView.tasksTableView.dataSource = self
         contentView.tasksTableView.delegate = self
@@ -83,7 +88,7 @@ extension TasksViewController {
 extension TasksViewController {
     
     @IBAction func addButtonPressed (sender : Button) {
-        //TODO: navigate to detail screen
+        presenter.pushToDetailTaskController(task: nil)
     }
     
     @IBAction func settingsButonPressed (sender : Button) {
@@ -142,7 +147,7 @@ extension TasksViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: navigate to detail screen
+        presenter.pushToDetailTaskController(task: presenter.tasks?[indexPath.row])
     }
     
 }

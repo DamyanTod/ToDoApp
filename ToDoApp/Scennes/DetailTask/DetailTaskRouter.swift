@@ -1,23 +1,26 @@
 //
-//  TasksRouter.swift
+//  DetailTaskRouter.swift
 //  ToDoApp
 //
-//  Created by El Capitan on 8/22/17.
+//  Created by El Capitan on 8/23/17.
 //  Copyright (c) 2017 DamyanTod. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-protocol TasksRouterInput {
+protocol DetailTaskRouterInput {
     
     func navigateToSomewhere()
-    func navigateToDetailTasks(task : Task?)
+    func navigateToPreviousController()
+    func navigateToDatePicker(_ task : Task?)
+    func navigateToCategories (_ task : Task?)
+    
 }
 
-class TasksRouter: TasksRouterInput {
-    
-    weak var viewController: TasksViewController?
+class DetailTaskRouter: DetailTaskRouterInput {
+
+    weak var viewController: DetailTaskViewController?
     
     // MARK: - Navigation
     
@@ -43,11 +46,23 @@ class TasksRouter: TasksRouterInput {
         // destinationViewController.delegate = self.viewController
     }
     
-    func navigateToDetailTasks(task : Task?) {
-        if let viewController = UIStoryboard(name: Transitions.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Transitions.detailTaskController) as? DetailTaskViewController {
+    func navigateToPreviousController() {
+        let _ = viewController?.navigationController?.popViewController(animated: true)
+    }
+    
+    func navigateToDatePicker (_ task : Task?) {
+        if let viewController = UIStoryboard(name: Transitions.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Transitions.datePickerController) as? DatePickerViewController {
             viewController.presenter.task = task
             self.viewController?.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    
+    func navigateToCategories (_ task : Task?) {
+        if let viewController = UIStoryboard(name: Transitions.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Transitions.taskCategoriesController) as? TaskCategoriesViewController {
+            viewController.presenter.task = task
+            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
     
 }
