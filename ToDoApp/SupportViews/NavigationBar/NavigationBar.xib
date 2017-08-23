@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vkw-Kx-TPB" customClass="NavigationBar" customModule="ToDoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="leftMenuBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMo-8x-Bmp" customClass="Button" customModule="ToDoApp" customModuleProvider="target">
+                    <rect key="frame" x="8" y="25" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="2ar-R7-5Xe"/>
+                        <constraint firstAttribute="width" constant="35" id="uaa-vm-4CE"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCl-Nn-xVn" customClass="Button" customModule="ToDoApp" customModuleProvider="target">
+                    <rect key="frame" x="345" y="25" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="1HE-Je-KIB"/>
+                        <constraint firstAttribute="width" constant="35" id="NPR-d3-7XO"/>
+                    </constraints>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOS-0s-Bfs" customClass="BaseLabel" customModule="ToDoApp" customModuleProvider="target">
+                    <rect key="frame" x="160" y="28" width="69" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" red="0.0078431372550000003" green="0.1019607843" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-pS-HD8">
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="2Eo-ck-AYP"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vr-qP-BFI" customClass="Button" customModule="ToDoApp" customModuleProvider="target">
+                    <rect key="frame" x="302" y="25" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="t1t-aD-ACT"/>
+                        <constraint firstAttribute="width" constant="35" id="utZ-cC-gWc"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CCl-Nn-xVn" secondAttribute="trailing" constant="8" id="2cA-h8-7wk"/>
+                <constraint firstItem="CCl-Nn-xVn" firstAttribute="top" secondItem="vkw-Kx-TPB" secondAttribute="top" constant="25" id="5Z2-4e-3nX"/>
+                <constraint firstItem="zmD-pS-HD8" firstAttribute="top" secondItem="vkw-Kx-TPB" secondAttribute="top" id="9K5-PH-gnJ"/>
+                <constraint firstItem="1Vr-qP-BFI" firstAttribute="top" secondItem="vkw-Kx-TPB" secondAttribute="top" constant="25" id="9mn-XA-3zE"/>
+                <constraint firstAttribute="bottom" secondItem="eOS-0s-Bfs" secondAttribute="bottom" constant="10" id="9xq-dl-uof"/>
+                <constraint firstItem="zmD-pS-HD8" firstAttribute="leading" secondItem="vkw-Kx-TPB" secondAttribute="leading" id="FJf-ua-xdq"/>
+                <constraint firstItem="eOS-0s-Bfs" firstAttribute="centerX" secondItem="vkw-Kx-TPB" secondAttribute="centerX" id="GE8-Uz-mV8"/>
+                <constraint firstItem="xMo-8x-Bmp" firstAttribute="leading" secondItem="vkw-Kx-TPB" secondAttribute="leading" constant="8" id="LyZ-1z-aNI"/>
+                <constraint firstItem="xMo-8x-Bmp" firstAttribute="top" secondItem="vkw-Kx-TPB" secondAttribute="top" constant="25" id="MIC-Dq-zwU"/>
+                <constraint firstItem="CCl-Nn-xVn" firstAttribute="leading" secondItem="1Vr-qP-BFI" secondAttribute="trailing" constant="8" id="Ndi-Wo-igp"/>
+                <constraint firstAttribute="trailing" secondItem="zmD-pS-HD8" secondAttribute="trailing" id="SJS-mu-fYF"/>
+                <constraint firstItem="eOS-0s-Bfs" firstAttribute="top" secondItem="vkw-Kx-TPB" secondAttribute="top" constant="28" id="bzm-uD-Zss"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftSideLeftButton" destination="xMo-8x-Bmp" id="Yjy-j4-sUu"/>
+                <outlet property="rightSideLeftButton" destination="1Vr-qP-BFI" id="5wu-SK-Wvh"/>
+                <outlet property="rightSideRightButton" destination="CCl-Nn-xVn" id="ki3-KN-N2N"/>
+                <outlet property="titleLabel" destination="eOS-0s-Bfs" id="nvd-x7-2Ov"/>
+                <outlet property="topNavigationBarBackgroundView" destination="zmD-pS-HD8" id="5JL-G7-6SV"/>
+            </connections>
+            <point key="canvasLocation" x="2991" y="-179"/>
+        </view>
+    </objects>
+</document>
