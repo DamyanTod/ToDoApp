@@ -45,7 +45,7 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
         contentView.addLikeSubViewIn(parent: self.view)
         setupDelegates()
         addTargets()
-        filterTasks(segmentControl: contentView.tableViewHeader.taskStatusSegmentController)
+        filterTasks(status: contentView.tableViewHeader.getStatus())
     }
     
     private func setupDelegates () {
@@ -59,9 +59,8 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
         contentView.tableViewHeader.taskStatusSegmentController.addTarget(self, action: #selector(taskStatusChanged), for: .valueChanged)
     }
     
-    fileprivate func filterTasks (segmentControl : UISegmentedControl) {
-        if let title = segmentControl.titleForSegment(at: segmentControl.selectedSegmentIndex),
-            let status = SegmentStatus(rawValue: title) {
+    fileprivate func filterTasks (status : SegmentStatus?) {
+        if let status = status {
             presenter.filterTasks(value : status)
         }
     }
@@ -92,7 +91,9 @@ extension TasksViewController {
     }
     
     @IBAction func taskStatusChanged (sender : UISegmentedControl) {
-        filterTasks(segmentControl: sender)
+        if sender == contentView.tableViewHeader.taskStatusSegmentController {
+            filterTasks(status: contentView.tableViewHeader.getStatus())
+        }
     }
 
 }
@@ -120,6 +121,14 @@ extension TasksViewController : UITableViewDataSource, UITableViewDelegate {
         
         cell.delegate = self
         cell.swipeEffect = YATableSwipeEffect.trail
+        
+        if let status = contentView.tableViewHeader.getStatus() {
+            if status == .completed {
+                cell.leftViewSwipingEnabled = false
+            } else {
+                cell.leftViewSwipingEnabled = true
+            }
+        }
 
         return cell
     }
@@ -161,7 +170,7 @@ extension TasksViewController : YMTableViewCellDelegate {
         if swipeMode == YATableSwipeMode.leftON {
             if let indexpath = contentView.tasksTableView.indexPath(for: cell) {
                 presenter.changeTaskStateToDone(indexpath.row)
-                filterTasks(segmentControl: contentView.tableViewHeader.taskStatusSegmentController)
+                filterTasks(status: contentView.tableViewHeader.getStatus())
             }
         }
     }

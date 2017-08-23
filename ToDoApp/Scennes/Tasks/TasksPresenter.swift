@@ -140,7 +140,7 @@ extension TasksPresenter {
         }
         
         archivedTasks?[archivedIndex].isDone = true
-        tasks?[archivedIndex].isDone = true
+        tasks?[index].isDone = true
         
     }
 

@@ -97,6 +97,9 @@ typedef void (^YMTableCellDidChangeModeBlock)(UITableViewCell *cell, YATableSwip
 /** Enable or disable swiping, defaults to YES **/
 @property (nonatomic, assign) BOOL swipingEnabled;
 
+/** Enable or disable swiping, defaults to YES **/
+@property (nonatomic, assign) BOOL leftViewSwipingEnabled;
+
 /** 
  *
  * @return BOOL to specify if a swipe is occurring

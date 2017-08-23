@@ -37,5 +37,23 @@ class TasksHeaderView : UIView, SubViewProtocol {
         taskStatusSegmentController.setTitle(SegmentStatus.completed.rawValue, forSegmentAt: 1)
     }
     
-    
 }
+
+//MARK: Public
+extension TasksHeaderView {
+    func getStatus () -> SegmentStatus?  {
+        if let title = taskStatusSegmentController.titleForSegment(at: taskStatusSegmentController.selectedSegmentIndex),
+            let status = SegmentStatus(rawValue: title) {
+            return status
+        }
+        return nil
+    }
+}
+
+
+
+
+
+
+
+

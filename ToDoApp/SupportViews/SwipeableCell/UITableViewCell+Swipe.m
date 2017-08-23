@@ -17,6 +17,7 @@ static const void *YKTableRightViewKey = &YKTableRightViewKey;
 static const void *YKTableLeftViewKey = &YKTableLeftViewKey;
 static const void *YKTableSwipeModeKey = &YKTableSwipeModeKey;
 static const void *YKTableSwipingEnabledKey = &YKTableSwipingEnabledKey;
+static const void *YKTableLeftViewSwipingEnabledKey = &YKTableLeftViewSwipingEnabledKey;
 static const void *YKTableCurrentSwipeModeKey = &YKTableCurrentSwipeModeKey;
 static const void *YKTableSwipeContainerKey = &YKTableSwipeContainerKey;
 static const void *YKTableSwipeEffectKey = &YKTableSwipeEffectKey;
@@ -90,6 +91,16 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
 - (void)setSwipingEnabled:(BOOL)swipingEnabled
 {
     objc_setAssociatedObject(self, YKTableSwipingEnabledKey, @(swipingEnabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)leftViewSwipingEnabled
+{
+    return [objc_getAssociatedObject(self, YKTableLeftViewSwipingEnabledKey) ?: @(YES) boolValue];
+}
+
+- (void)setLeftViewSwipingEnabled:(BOOL)setLeftViewSwipingEnabled
+{
+    objc_setAssociatedObject(self, YKTableLeftViewSwipingEnabledKey, @(setLeftViewSwipingEnabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIView *)swipeView
@@ -501,6 +512,9 @@ static const void *YKTableSwipeContainerViewBackgroundColorKey = &YKTableSwipeCo
     if (gestureRecognizer == self.panGestureRecognizer) {
         CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:gestureRecognizer.view];
         if (translation.y == 0.f) {
+            if (translation.x >= 0.f && !self.leftViewSwipingEnabled) {
+                return NO;
+            }
             if (translation.x >= 0.f && self.leftView == nil) {
                 return NO;
             }
