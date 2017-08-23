@@ -57,7 +57,7 @@ class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput 
         for button in contentView.footer.colorButtons {
             button.addTarget(self, action: #selector(colorButtonPressed), for: .touchDown)
         }
-        
+        contentView.footer.categoriesBtn.addTarget(self, action: #selector(categoriesButtonPressed), for: .touchUpInside)
     }
     
     private func showDeleteButtonIfNeeded() {
@@ -73,7 +73,7 @@ class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput 
 extension DetailTaskViewController {
     func populateViews(task: Task) {
         contentView.titleTextField.text = task.title
-        contentView.footer.tagsBtn.setTitle(task.categories, for: .normal)
+        contentView.footer.categoriesBtn.setTitle(task.categories, for: .normal)
         contentView.footer.timeBtn.setTitle(task.completionDate.getUserLocalDate(), for: .normal)
         contentView.footer.indicatorColorView.backgroundColor = UIColor.colorWithHexString(hex: task.categoryColor)
     }
@@ -92,6 +92,10 @@ extension DetailTaskViewController {
     
     @IBAction func timeButtonPressed (sender: UIButton) {
         presenter.navigateToDatePicker()
+    }
+    
+    @IBAction func categoriesButtonPressed (sender: UIButton) {
+        presenter.navigateToCategories()
     }
     
     @IBAction func colorButtonPressed (sender: UIButton) {

@@ -18,6 +18,7 @@ enum ButtonType {
     case back
     case settings
     case add
+    case edit
     case positiveAnswerButton
     
 }
@@ -50,6 +51,9 @@ class Button: UIButton, ViewAnimationProtocol  {
 
         case .back:
             addImage("back_icon", color: UIColor.black)
+            
+        case .edit:
+            addImage("edit_icon", color: UIColor.black)
             
         case .positiveAnswerButton:
             self.setTitleColor(UIColor.black, for: .normal)

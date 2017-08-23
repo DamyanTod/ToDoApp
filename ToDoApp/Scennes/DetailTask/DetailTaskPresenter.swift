@@ -12,6 +12,7 @@ protocol DetailTaskPresenterInput: class {
     func backButtonPressed()
     func createTask()
     func navigateToDatePicker()
+    func navigateToCategories()
 }
 
 class DetailTaskPresenter: DetailTaskPresenterInput, DetailTaskInteractorOutput {
@@ -44,6 +45,10 @@ extension DetailTaskPresenter {
     
     func navigateToDatePicker() {
         router.navigateToDatePicker(task)
+    }
+    
+    func navigateToCategories() {
+        router.navigateToCategories(task)
     }
     
     func createTask() {

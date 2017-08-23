@@ -14,7 +14,7 @@ class DetailToDoFooter : UIView, SubViewProtocol {
     static let height:CGFloat = 132
     
     @IBOutlet weak var timeBtn: Button!
-    @IBOutlet weak var tagsBtn: Button!
+    @IBOutlet weak var categoriesBtn: Button!
     
     @IBOutlet weak var indicatorColorView: UIView!
     @IBOutlet var colorButtons: [UIButton]!
@@ -33,9 +33,9 @@ class DetailToDoFooter : UIView, SubViewProtocol {
     
     private func setupBtns () {
         timeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
-        tagsBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
+        categoriesBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
         timeBtn.setTitle(Date().getUserLocalDate() , for: .normal)
-        tagsBtn.setTitle("do", for: .normal)
+        categoriesBtn.setTitle("do", for: .normal)
 
         makeCircleView(view: indicatorColorView, hexColor: colors[0])
         

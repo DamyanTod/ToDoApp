@@ -16,4 +16,6 @@ struct Transitions {
     //MARK: Controllers
     static let datePickerController = "DatePickerViewController"
     static let detailTaskController = "DetailTaskViewController"
+    static let taskCategoriesController = "TaskCategoriesViewController"
+    
 }

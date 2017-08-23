@@ -24,4 +24,10 @@ class Task {
         self.isDone = isDone
     }
     
+    func getCategoriesAsArray () -> [String]? {
+        if categories != "" {
+            return categories.components(separatedBy: ", ")
+        }
+        return nil
+    }
 }

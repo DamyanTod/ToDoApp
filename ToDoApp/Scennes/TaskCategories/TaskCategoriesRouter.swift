@@ -1,5 +1,5 @@
 //
-//  DetailTaskRouter.swift
+//  TaskCategoriesRouter.swift
 //  ToDoApp
 //
 //  Created by El Capitan on 8/23/17.
@@ -9,18 +9,15 @@
 import Foundation
 import UIKit
 
-protocol DetailTaskRouterInput {
+protocol TaskCategoriesRouterInput {
     
     func navigateToSomewhere()
-    func navigateToPreviousController()
-    func navigateToDatePicker(_ task : Task?)
-    func navigateToCategories (_ task : Task?)
-    
+    func navigateToPreviusController()
 }
 
-class DetailTaskRouter: DetailTaskRouterInput {
-
-    weak var viewController: DetailTaskViewController?
+class TaskCategoriesRouter: TaskCategoriesRouterInput {
+    
+    weak var viewController: TaskCategoriesViewController?
     
     // MARK: - Navigation
     
@@ -46,23 +43,8 @@ class DetailTaskRouter: DetailTaskRouterInput {
         // destinationViewController.delegate = self.viewController
     }
     
-    func navigateToPreviousController() {
+    func navigateToPreviusController() {
         let _ = viewController?.navigationController?.popViewController(animated: true)
     }
-    
-    func navigateToDatePicker (_ task : Task?) {
-        if let viewController = UIStoryboard(name: Transitions.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Transitions.datePickerController) as? DatePickerViewController {
-            viewController.presenter.task = task
-            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
-    
-    func navigateToCategories (_ task : Task?) {
-        if let viewController = UIStoryboard(name: Transitions.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Transitions.taskCategoriesController) as? TaskCategoriesViewController {
-            viewController.presenter.task = task
-            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
-    
     
 }

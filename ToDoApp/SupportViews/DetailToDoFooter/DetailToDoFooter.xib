@@ -127,8 +127,8 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="categoriesBtn" destination="j2h-7P-x7y" id="i6R-Qd-unO"/>
                 <outlet property="indicatorColorView" destination="YG8-wL-pO2" id="yKq-yD-64V"/>
-                <outlet property="tagsBtn" destination="j2h-7P-x7y" id="6Lc-GU-mXG"/>
                 <outlet property="timeBtn" destination="EyB-0N-tnn" id="qyP-3Y-uBC"/>
                 <outletCollection property="footerImages" destination="mJn-GI-p4o" collectionClass="NSMutableArray" id="Bmm-uI-dNU"/>
                 <outletCollection property="footerImages" destination="KYq-36-Jbb" collectionClass="NSMutableArray" id="Jel-Up-Bdk"/>
