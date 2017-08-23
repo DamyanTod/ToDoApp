@@ -118,7 +118,7 @@ extension TasksViewController : UITableViewDataSource, UITableViewDelegate {
         
         presenter.populateCell(cell: cell, indexPath : indexPath)
         
-        //cell.delegate = self
+        cell.delegate = self
         cell.swipeEffect = YATableSwipeEffect.trail
 
         return cell
@@ -137,3 +137,37 @@ extension TasksViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
 }
+//MARK: YMTableViewCellDelegate delegates
+extension TasksViewController : YMTableViewCellDelegate {
+    func swipeableTableViewCell(_ cell: YMTableViewCell!, didTriggerLeftViewButtonWith index: Int) {
+        print("left")
+    }
+    
+    func swipeableTableViewCell(_ cell: YMTableViewCell!, didTriggerRightViewButtonWith index: Int) {
+        if index == YMTableViewCellTwoButtonSwipeViewTrashButtonIndex { // 2
+            if let indexpath = contentView.tasksTableView.indexPath(for: cell) {
+                presenter.removeItem(indexpath.row)
+            }
+        } else if index == YMTableViewCellTwoButtonSwipeViewShareButtonIndex {
+            //TODO: Share
+            print("share")
+        } else if index == YMTableViewCellTwoButtonSwipeViewUndoButtonIndex {
+            //TODO: show time changing screen
+            print("show time changing screen")
+        }
+    }
+    
+    func swipeableTableViewCell(_ cell: YMTableViewCell!, didCompleteSwipe swipeMode: YATableSwipeMode) {
+        if swipeMode == YATableSwipeMode.leftON {
+            if let indexpath = contentView.tasksTableView.indexPath(for: cell) {
+                presenter.changeTaskStateToDone(indexpath.row)
+                filterTasks(segmentControl: contentView.tableViewHeader.taskStatusSegmentController)
+            }
+        }
+    }
+}
+
+
+
+
+

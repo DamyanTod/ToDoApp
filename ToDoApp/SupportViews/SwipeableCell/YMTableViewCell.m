@@ -11,6 +11,7 @@
 #import "YMOneButtonSwipeView.h"
 #import "UITableViewCell+Swipe.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ToDoApp-Swift.h"
 
 
 const NSInteger YMTableViewCellTwoButtonSwipeViewTrashButtonIndex = 2;
@@ -102,9 +103,10 @@ static const NSInteger kRightSwipeViewWidth = 210;
     YMOneButtonSwipeView *leftView = [[YMOneButtonSwipeView alloc] init];
     
     leftView.backgroundColor = [UIColor whiteColor];
-    UIImage *checkImage = [UIImage imageNamed:@"checkmark"];
+    UIImage *checkImage = [[UIImage imageNamed:@"checkmark_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [leftView.aButton setImage:checkImage forState:UIControlStateNormal];
-    leftView.aButton.backgroundColor = [UIColor colorWithRed:0.15 green:0.6 blue:0.3 alpha:1];
+    leftView.aButton.imageView.tintColor = [UIColor blackColor];
+    leftView.aButton.backgroundColor = [UIColor defaultLightGreenColor];
     
     // Call the didTriggerLeftViewButtonWithIndex delegate when the left view button is triggered
     leftView.buttonTappedActionBlock= ^(void) {
@@ -176,7 +178,7 @@ static const NSInteger kRightSwipeViewWidth = 210;
 
 - (UIFont *)defaultFont
 {
-    return [UIFont fontWithName:@"SegoeUI-Semibold" size:12.0];
+    return [UIFont defaultFontFamilyWithFontSize:12.0];
 }
 
 @end

@@ -12,6 +12,8 @@ protocol TasksPresenterInput: class {
     
     func populateCell(cell: TasksCellProtocol, indexPath : IndexPath)
     func filterTasks(value : SegmentStatus)
+    func removeItem(_ index: Int)
+    func changeTaskStateToDone(_ index : Int)
 }
 
 class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
@@ -23,15 +25,10 @@ class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
     
     var tasks:[Task]? {
         didSet {
-            if let tasks = tasks,
-                tasks.count != 0 {
-                    view?.reloadTableView()
-            } else {
-                view?.jitterAddButton()
-            }
+            performActionAfterChangedTasks(tasks: tasks)
         }
     }
-    
+
     fileprivate var archivedTasks:[Task]?
     
     fileprivate let dateFormatter = DateFormatter()
@@ -55,6 +52,16 @@ class TasksPresenter: TasksPresenterInput, TasksInteractorOutput {
         dateFormatter.timeStyle = .short
         dateFormatter.locale = Locale(identifier: "en_US")
         
+    }
+    
+    fileprivate func performActionAfterChangedTasks (tasks : [Task]?) {
+        if let tasks = tasks,
+            tasks.count != 0 {
+            view?.reloadTableView()
+        } else {
+            view?.reloadTableView()
+            view?.jitterAddButton()
+        }
     }
 
 }
@@ -91,6 +98,51 @@ extension TasksPresenter {
         }
     }
     
+    func removeItem(_ index: Int) {
+        //TODO: need to take the tasks with query from CoreData
+        //There is bug right now here need to be handled with CoreData
+        var result:Int?
+        var i = 0
+        if let item = tasks?[index] {
+            for archivedItem in archivedTasks! {
+                if item.title == archivedItem.title {
+                    result = i
+                    break
+                }
+                i += 1
+            }
+        }
+        guard let archivedIndex = result else {
+            return
+        }
+        
+        archivedTasks?.remove(at: archivedIndex)
+        tasks?.remove(at: index)
+        performActionAfterChangedTasks(tasks: tasks)
+    }
+    
+    func changeTaskStateToDone(_ index: Int) {
+        //TODO: need to take the tasks with query from CoreData
+        //There is bug right now here need to be handled with CoreData
+        var result:Int?
+        var i = 0
+        if let item = tasks?[index] {
+            for archivedItem in archivedTasks! {
+                if item.title == archivedItem.title {
+                    result = i
+                    break
+                }
+                i += 1
+            }
+        }
+        guard let archivedIndex = result else {
+            return
+        }
+        
+        archivedTasks?[archivedIndex].isDone = true
+        tasks?[archivedIndex].isDone = true
+        
+    }
 
 }
 

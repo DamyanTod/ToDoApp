@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct HexColors {
+class HexColors {
     
     static let defaultLightGreenColor = "#C6DA02"
     static let defaultDarkGreenColor = "#79A700"
@@ -40,7 +40,10 @@ extension UIColor {
             alpha: CGFloat(1.0)
         )
     }
-
+    
+    static func defaultLightGreenColor() -> UIColor {
+        return colorWithHexString(hex: HexColors.defaultLightGreenColor)
+    }
 
  
 }
