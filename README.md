@@ -11,6 +11,7 @@ For example:
   * if we want to add API we can do it in the interactor
   * if we want to create at the begining or in later state Unit testing we can do it easyly with all protocols which are available from the architecture.
   
+Setting screen is not implemented (Categories can be edit directly, I didnt implement colors and the switch)
   
   
 
