@@ -7,23 +7,148 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440301D01F4E902800E32C38 /* TaskRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440301CF1F4E902800E32C38 /* TaskRequest.swift */; };
+		440301D21F4E903000E32C38 /* CategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440301D11F4E903000E32C38 /* CategoryRequest.swift */; };
+		440301E41F4EB09400E32C38 /* DatePickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440301E31F4EB09400E32C38 /* DatePickerInteractor.swift */; };
+		440301E61F4ED87400E32C38 /* splashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 440301E51F4ED87400E32C38 /* splashScreen.png */; };
+		4416E2441F4CA215008A1108 /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2431F4CA215008A1108 /* TasksCell.swift */; };
+		4416E2461F4CA237008A1108 /* TasksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4416E2451F4CA237008A1108 /* TasksCell.xib */; };
+		4416E2481F4CA8D7008A1108 /* ViewAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2471F4CA8D7008A1108 /* ViewAnimationProtocol.swift */; };
+		4416E2531F4CABB9008A1108 /* UITableViewCell+Swipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4416E24C1F4CABB9008A1108 /* UITableViewCell+Swipe.m */; };
+		4416E2541F4CABB9008A1108 /* YMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4416E24E1F4CABB9008A1108 /* YMTableViewCell.m */; };
+		4416E2551F4CABB9008A1108 /* YMOneButtonSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2501F4CABB9008A1108 /* YMOneButtonSwipeView.m */; };
+		4416E2561F4CABB9008A1108 /* YMTwoButtonSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2521F4CABB9008A1108 /* YMTwoButtonSwipeView.m */; };
+		4416E2581F4CAC52008A1108 /* DrawCircleWithBottomAndUpperLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2571F4CAC52008A1108 /* DrawCircleWithBottomAndUpperLine.swift */; };
+		4416E25A1F4CAEBC008A1108 /* GlobalNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2591F4CAEBC008A1108 /* GlobalNumbers.swift */; };
 		443552851F4C357D009A0C7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443552841F4C357D009A0C7B /* AppDelegate.swift */; };
-		443552871F4C357D009A0C7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443552861F4C357D009A0C7B /* ViewController.swift */; };
 		4435528A1F4C357D009A0C7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443552881F4C357D009A0C7B /* Main.storyboard */; };
 		4435528D1F4C357D009A0C7B /* ToDoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4435528B1F4C357D009A0C7B /* ToDoApp.xcdatamodeld */; };
 		4435528F1F4C357D009A0C7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4435528E1F4C357D009A0C7B /* Assets.xcassets */; };
 		443552921F4C357D009A0C7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443552901F4C357D009A0C7B /* LaunchScreen.storyboard */; };
+		44385CD01F4D4B3300697708 /* TasksHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CCF1F4D4B3300697708 /* TasksHeaderView.swift */; };
+		44385CD21F4D4B3F00697708 /* TasksHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44385CD11F4D4B3F00697708 /* TasksHeaderView.xib */; };
+		44385CD91F4D7B8200697708 /* DetailTaskConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CD41F4D7B8200697708 /* DetailTaskConfigurator.swift */; };
+		44385CDA1F4D7B8200697708 /* DetailTaskInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CD51F4D7B8200697708 /* DetailTaskInteractor.swift */; };
+		44385CDB1F4D7B8200697708 /* DetailTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CD61F4D7B8200697708 /* DetailTaskPresenter.swift */; };
+		44385CDC1F4D7B8200697708 /* DetailTaskRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CD71F4D7B8200697708 /* DetailTaskRouter.swift */; };
+		44385CDD1F4D7B8200697708 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CD81F4D7B8200697708 /* DetailTaskViewController.swift */; };
+		44385CDF1F4D7BBC00697708 /* DetailTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CDE1F4D7BBC00697708 /* DetailTaskView.swift */; };
+		44385CE11F4D7BE900697708 /* DetailTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44385CE01F4D7BE900697708 /* DetailTaskView.xib */; };
+		44385CE31F4D83C900697708 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44385CE21F4D83C900697708 /* DateExtension.swift */; };
+		44628A5E1F4C625B00FA00D1 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44628A5D1F4C625B00FA00D1 /* NavigationBar.swift */; };
+		44628A601F4C62BD00FA00D1 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44628A5F1F4C62BD00FA00D1 /* NavigationBar.xib */; };
+		44628A631F4C656C00FA00D1 /* SubViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44628A621F4C656C00FA00D1 /* SubViewProtocol.swift */; };
+		446F7CBD1F4C3A00001B6A55 /* TasksConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F7CB81F4C3A00001B6A55 /* TasksConfigurator.swift */; };
+		446F7CBE1F4C3A00001B6A55 /* TasksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F7CB91F4C3A00001B6A55 /* TasksInteractor.swift */; };
+		446F7CBF1F4C3A00001B6A55 /* TasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F7CBA1F4C3A00001B6A55 /* TasksPresenter.swift */; };
+		446F7CC01F4C3A00001B6A55 /* TasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F7CBB1F4C3A00001B6A55 /* TasksRouter.swift */; };
+		446F7CC11F4C3A00001B6A55 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F7CBC1F4C3A00001B6A55 /* TasksViewController.swift */; };
+		446F7CC31F4C3A75001B6A55 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F7CC21F4C3A75001B6A55 /* ViewExtension.swift */; };
+		446F7CC71F4C3BDC001B6A55 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F7CC61F4C3BDC001B6A55 /* TasksView.swift */; };
+		4489437E1F4C536A00BF9979 /* TasksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4489437D1F4C536A00BF9979 /* TasksView.xib */; };
+		448943801F4C542500BF9979 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489437F1F4C542500BF9979 /* ColorExtension.swift */; };
+		448943821F4C545500BF9979 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448943811F4C545500BF9979 /* Button.swift */; };
+		448943841F4C551700BF9979 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448943831F4C551700BF9979 /* BaseLabel.swift */; };
+		448943861F4C557D00BF9979 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448943851F4C557D00BF9979 /* FontExtension.swift */; };
+		448943881F4C55D500BF9979 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448943871F4C55D500BF9979 /* CGFloatExtension.swift */; };
+		4489438A1F4C562B00BF9979 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448943891F4C562B00BF9979 /* Appearance.swift */; };
+		44D014FE1F4DC5A8009A5D61 /* DetailToDoFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D014FD1F4DC5A8009A5D61 /* DetailToDoFooter.xib */; };
+		44D015001F4DC5C3009A5D61 /* DetailToDoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D014FF1F4DC5C3009A5D61 /* DetailToDoFooter.swift */; };
+		44D015081F4DE4DA009A5D61 /* DatePickerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015031F4DE4DA009A5D61 /* DatePickerConfigurator.swift */; };
+		44D0150A1F4DE4DA009A5D61 /* DatePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015051F4DE4DA009A5D61 /* DatePickerPresenter.swift */; };
+		44D0150B1F4DE4DA009A5D61 /* DatePickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015061F4DE4DA009A5D61 /* DatePickerRouter.swift */; };
+		44D0150C1F4DE4DA009A5D61 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015071F4DE4DA009A5D61 /* DatePickerViewController.swift */; };
+		44D0150E1F4DE51F009A5D61 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0150D1F4DE51F009A5D61 /* DatePickerView.swift */; };
+		44D015101F4DE539009A5D61 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D0150F1F4DE539009A5D61 /* DatePickerView.xib */; };
+		44D015121F4DE9A2009A5D61 /* LocalizeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015111F4DE9A2009A5D61 /* LocalizeStrings.swift */; };
+		44D015141F4DEEC6009A5D61 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015131F4DEEC6009A5D61 /* Transitions.swift */; };
+		44D0151B1F4E0230009A5D61 /* TaskCategoriesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015161F4E0230009A5D61 /* TaskCategoriesConfigurator.swift */; };
+		44D0151C1F4E0230009A5D61 /* TaskCategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015171F4E0230009A5D61 /* TaskCategoriesInteractor.swift */; };
+		44D0151D1F4E0230009A5D61 /* TaskCategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015181F4E0230009A5D61 /* TaskCategoriesPresenter.swift */; };
+		44D0151E1F4E0230009A5D61 /* TaskCategoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015191F4E0230009A5D61 /* TaskCategoriesRouter.swift */; };
+		44D0151F1F4E0230009A5D61 /* TaskCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0151A1F4E0230009A5D61 /* TaskCategoriesViewController.swift */; };
+		44D015211F4E026B009A5D61 /* TaskCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015201F4E026B009A5D61 /* TaskCategoriesView.swift */; };
+		44D015231F4E028D009A5D61 /* TaskCategoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D015221F4E028D009A5D61 /* TaskCategoriesView.xib */; };
+		44D015251F4E03D4009A5D61 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015241F4E03D4009A5D61 /* TagView.swift */; };
+		44D0152A1F4E150A009A5D61 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015291F4E150A009A5D61 /* DatabaseManager.swift */; };
+		B951CB1194D983FA3C51388F /* Pods_ToDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5635C2C5184511C43E38EAF6 /* Pods_ToDoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0402D7F313809BFA5166E177 /* Pods-ToDoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp.release.xcconfig"; sourceTree = "<group>"; };
+		440301CF1F4E902800E32C38 /* TaskRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRequest.swift; sourceTree = "<group>"; };
+		440301D11F4E903000E32C38 /* CategoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRequest.swift; sourceTree = "<group>"; };
+		440301E31F4EB09400E32C38 /* DatePickerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerInteractor.swift; sourceTree = "<group>"; };
+		440301E51F4ED87400E32C38 /* splashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreen.png; sourceTree = "<group>"; };
+		4416E2431F4CA215008A1108 /* TasksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
+		4416E2451F4CA237008A1108 /* TasksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasksCell.xib; sourceTree = "<group>"; };
+		4416E2471F4CA8D7008A1108 /* ViewAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationProtocol.swift; sourceTree = "<group>"; };
+		4416E24A1F4CABB9008A1108 /* ToDoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ToDoApp-Bridging-Header.h"; path = "ToDoApp/SupportViews/SwipeableCell/ToDoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		4416E24B1F4CABB9008A1108 /* UITableViewCell+Swipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Swipe.h"; sourceTree = "<group>"; };
+		4416E24C1F4CABB9008A1108 /* UITableViewCell+Swipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Swipe.m"; sourceTree = "<group>"; };
+		4416E24D1F4CABB9008A1108 /* YMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTableViewCell.h; sourceTree = "<group>"; };
+		4416E24E1F4CABB9008A1108 /* YMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTableViewCell.m; sourceTree = "<group>"; };
+		4416E24F1F4CABB9008A1108 /* YMOneButtonSwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMOneButtonSwipeView.h; sourceTree = "<group>"; };
+		4416E2501F4CABB9008A1108 /* YMOneButtonSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMOneButtonSwipeView.m; sourceTree = "<group>"; };
+		4416E2511F4CABB9008A1108 /* YMTwoButtonSwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTwoButtonSwipeView.h; sourceTree = "<group>"; };
+		4416E2521F4CABB9008A1108 /* YMTwoButtonSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTwoButtonSwipeView.m; sourceTree = "<group>"; };
+		4416E2571F4CAC52008A1108 /* DrawCircleWithBottomAndUpperLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawCircleWithBottomAndUpperLine.swift; sourceTree = "<group>"; };
+		4416E2591F4CAEBC008A1108 /* GlobalNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNumbers.swift; sourceTree = "<group>"; };
 		443552811F4C357D009A0C7B /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		443552841F4C357D009A0C7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		443552861F4C357D009A0C7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		443552891F4C357D009A0C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4435528C1F4C357D009A0C7B /* ToDoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoApp.xcdatamodel; sourceTree = "<group>"; };
 		4435528E1F4C357D009A0C7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		443552911F4C357D009A0C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443552931F4C357D009A0C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44385CCF1F4D4B3300697708 /* TasksHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksHeaderView.swift; sourceTree = "<group>"; };
+		44385CD11F4D4B3F00697708 /* TasksHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasksHeaderView.xib; sourceTree = "<group>"; };
+		44385CD41F4D7B8200697708 /* DetailTaskConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTaskConfigurator.swift; sourceTree = "<group>"; };
+		44385CD51F4D7B8200697708 /* DetailTaskInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTaskInteractor.swift; sourceTree = "<group>"; };
+		44385CD61F4D7B8200697708 /* DetailTaskPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTaskPresenter.swift; sourceTree = "<group>"; };
+		44385CD71F4D7B8200697708 /* DetailTaskRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTaskRouter.swift; sourceTree = "<group>"; };
+		44385CD81F4D7B8200697708 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
+		44385CDE1F4D7BBC00697708 /* DetailTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTaskView.swift; sourceTree = "<group>"; };
+		44385CE01F4D7BE900697708 /* DetailTaskView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTaskView.xib; sourceTree = "<group>"; };
+		44385CE21F4D83C900697708 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		44628A5D1F4C625B00FA00D1 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		44628A5F1F4C62BD00FA00D1 /* NavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
+		44628A621F4C656C00FA00D1 /* SubViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewProtocol.swift; sourceTree = "<group>"; };
+		446F7CB81F4C3A00001B6A55 /* TasksConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksConfigurator.swift; sourceTree = "<group>"; };
+		446F7CB91F4C3A00001B6A55 /* TasksInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksInteractor.swift; sourceTree = "<group>"; };
+		446F7CBA1F4C3A00001B6A55 /* TasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksPresenter.swift; sourceTree = "<group>"; };
+		446F7CBB1F4C3A00001B6A55 /* TasksRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksRouter.swift; sourceTree = "<group>"; };
+		446F7CBC1F4C3A00001B6A55 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		446F7CC21F4C3A75001B6A55 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		446F7CC61F4C3BDC001B6A55 /* TasksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		4489437D1F4C536A00BF9979 /* TasksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasksView.xib; sourceTree = "<group>"; };
+		4489437F1F4C542500BF9979 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		448943811F4C545500BF9979 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		448943831F4C551700BF9979 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		448943851F4C557D00BF9979 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		448943871F4C55D500BF9979 /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
+		448943891F4C562B00BF9979 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		44D014FD1F4DC5A8009A5D61 /* DetailToDoFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailToDoFooter.xib; sourceTree = "<group>"; };
+		44D014FF1F4DC5C3009A5D61 /* DetailToDoFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailToDoFooter.swift; sourceTree = "<group>"; };
+		44D015031F4DE4DA009A5D61 /* DatePickerConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerConfigurator.swift; sourceTree = "<group>"; };
+		44D015051F4DE4DA009A5D61 /* DatePickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerPresenter.swift; sourceTree = "<group>"; };
+		44D015061F4DE4DA009A5D61 /* DatePickerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerRouter.swift; sourceTree = "<group>"; };
+		44D015071F4DE4DA009A5D61 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		44D0150D1F4DE51F009A5D61 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		44D0150F1F4DE539009A5D61 /* DatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		44D015111F4DE9A2009A5D61 /* LocalizeStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizeStrings.swift; sourceTree = "<group>"; };
+		44D015131F4DEEC6009A5D61 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
+		44D015161F4E0230009A5D61 /* TaskCategoriesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCategoriesConfigurator.swift; sourceTree = "<group>"; };
+		44D015171F4E0230009A5D61 /* TaskCategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCategoriesInteractor.swift; sourceTree = "<group>"; };
+		44D015181F4E0230009A5D61 /* TaskCategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCategoriesPresenter.swift; sourceTree = "<group>"; };
+		44D015191F4E0230009A5D61 /* TaskCategoriesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCategoriesRouter.swift; sourceTree = "<group>"; };
+		44D0151A1F4E0230009A5D61 /* TaskCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCategoriesViewController.swift; sourceTree = "<group>"; };
+		44D015201F4E026B009A5D61 /* TaskCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCategoriesView.swift; sourceTree = "<group>"; };
+		44D015221F4E028D009A5D61 /* TaskCategoriesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskCategoriesView.xib; sourceTree = "<group>"; };
+		44D015241F4E03D4009A5D61 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		44D015291F4E150A009A5D61 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		5635C2C5184511C43E38EAF6 /* Pods_ToDoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE2900F6AB91D4B4DF4F800A /* Pods-ToDoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +156,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B951CB1194D983FA3C51388F /* Pods_ToDoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20F5595CE7445596D1BDE30C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE2900F6AB91D4B4DF4F800A /* Pods-ToDoApp.debug.xcconfig */,
+				0402D7F313809BFA5166E177 /* Pods-ToDoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4416E2421F4CA1FC008A1108 /* TasksCell */ = {
+			isa = PBXGroup;
+			children = (
+				4416E2431F4CA215008A1108 /* TasksCell.swift */,
+				4416E2451F4CA237008A1108 /* TasksCell.xib */,
+			);
+			path = TasksCell;
+			sourceTree = "<group>";
+		};
+		4416E2491F4CAB7A008A1108 /* SwipeableCell */ = {
+			isa = PBXGroup;
+			children = (
+				4416E24B1F4CABB9008A1108 /* UITableViewCell+Swipe.h */,
+				4416E24C1F4CABB9008A1108 /* UITableViewCell+Swipe.m */,
+				4416E24D1F4CABB9008A1108 /* YMTableViewCell.h */,
+				4416E24E1F4CABB9008A1108 /* YMTableViewCell.m */,
+				4416E24F1F4CABB9008A1108 /* YMOneButtonSwipeView.h */,
+				4416E2501F4CABB9008A1108 /* YMOneButtonSwipeView.m */,
+				4416E2511F4CABB9008A1108 /* YMTwoButtonSwipeView.h */,
+				4416E2521F4CABB9008A1108 /* YMTwoButtonSwipeView.m */,
+			);
+			path = SwipeableCell;
+			sourceTree = "<group>";
+		};
 		443552781F4C357D009A0C7B = {
 			isa = PBXGroup;
 			children = (
+				4416E24A1F4CABB9008A1108 /* ToDoApp-Bridging-Header.h */,
 				443552831F4C357D009A0C7B /* ToDoApp */,
 				443552821F4C357D009A0C7B /* Products */,
+				20F5595CE7445596D1BDE30C /* Pods */,
+				E3B3EB91492B84A0E02E8F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +218,14 @@
 		443552831F4C357D009A0C7B /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				44D015281F4E14F2009A5D61 /* Database */,
+				44628A611F4C653F00FA00D1 /* Protocols */,
 				4435529E1F4C364C009A0C7B /* Extensions */,
 				4435529D1F4C3629009A0C7B /* SupportViews */,
 				4435529C1F4C360F009A0C7B /* Models */,
 				4435529B1F4C35F8009A0C7B /* Scennes */,
 				4435529A1F4C35E0009A0C7B /* Constants */,
 				443552991F4C358D009A0C7B /* SuportFiles */,
-				443552861F4C357D009A0C7B /* ViewController.swift */,
 				443552881F4C357D009A0C7B /* Main.storyboard */,
 			);
 			path = ToDoApp;
@@ -74,8 +237,10 @@
 				443552841F4C357D009A0C7B /* AppDelegate.swift */,
 				4435528E1F4C357D009A0C7B /* Assets.xcassets */,
 				443552901F4C357D009A0C7B /* LaunchScreen.storyboard */,
+				440301E51F4ED87400E32C38 /* splashScreen.png */,
 				443552931F4C357D009A0C7B /* Info.plist */,
 				4435528B1F4C357D009A0C7B /* ToDoApp.xcdatamodeld */,
+				448943891F4C562B00BF9979 /* Appearance.swift */,
 			);
 			name = SuportFiles;
 			sourceTree = "<group>";
@@ -83,6 +248,9 @@
 		4435529A1F4C35E0009A0C7B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				4416E2591F4CAEBC008A1108 /* GlobalNumbers.swift */,
+				44D015111F4DE9A2009A5D61 /* LocalizeStrings.swift */,
+				44D015131F4DEEC6009A5D61 /* Transitions.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -90,6 +258,10 @@
 		4435529B1F4C35F8009A0C7B /* Scennes */ = {
 			isa = PBXGroup;
 			children = (
+				44D015151F4E020B009A5D61 /* TaskCategories */,
+				44D015021F4DE4BB009A5D61 /* DatePicker */,
+				44385CD31F4D7B3900697708 /* DetailTask */,
+				446F7CB71F4C39E8001B6A55 /* Tasks */,
 			);
 			path = Scennes;
 			sourceTree = "<group>";
@@ -97,6 +269,8 @@
 		4435529C1F4C360F009A0C7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				440301CF1F4E902800E32C38 /* TaskRequest.swift */,
+				440301D11F4E903000E32C38 /* CategoryRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +278,15 @@
 		4435529D1F4C3629009A0C7B /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
+				44D014FC1F4DC57C009A5D61 /* DetailToDoFooter */,
+				44385CCE1F4D4B0800697708 /* TasksHeaderView */,
+				4416E2491F4CAB7A008A1108 /* SwipeableCell */,
+				4416E2421F4CA1FC008A1108 /* TasksCell */,
+				44628A5C1F4C623D00FA00D1 /* NavigationBar */,
+				448943811F4C545500BF9979 /* Button.swift */,
+				44D015241F4E03D4009A5D61 /* TagView.swift */,
+				448943831F4C551700BF9979 /* BaseLabel.swift */,
+				4416E2571F4CAC52008A1108 /* DrawCircleWithBottomAndUpperLine.swift */,
 			);
 			path = SupportViews;
 			sourceTree = "<group>";
@@ -111,8 +294,121 @@
 		4435529E1F4C364C009A0C7B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				446F7CC21F4C3A75001B6A55 /* ViewExtension.swift */,
+				4489437F1F4C542500BF9979 /* ColorExtension.swift */,
+				448943851F4C557D00BF9979 /* FontExtension.swift */,
+				448943871F4C55D500BF9979 /* CGFloatExtension.swift */,
+				44385CE21F4D83C900697708 /* DateExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		44385CCE1F4D4B0800697708 /* TasksHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				44385CCF1F4D4B3300697708 /* TasksHeaderView.swift */,
+				44385CD11F4D4B3F00697708 /* TasksHeaderView.xib */,
+			);
+			path = TasksHeaderView;
+			sourceTree = "<group>";
+		};
+		44385CD31F4D7B3900697708 /* DetailTask */ = {
+			isa = PBXGroup;
+			children = (
+				44385CD41F4D7B8200697708 /* DetailTaskConfigurator.swift */,
+				44385CD51F4D7B8200697708 /* DetailTaskInteractor.swift */,
+				44385CD61F4D7B8200697708 /* DetailTaskPresenter.swift */,
+				44385CD71F4D7B8200697708 /* DetailTaskRouter.swift */,
+				44385CD81F4D7B8200697708 /* DetailTaskViewController.swift */,
+				44385CDE1F4D7BBC00697708 /* DetailTaskView.swift */,
+				44385CE01F4D7BE900697708 /* DetailTaskView.xib */,
+			);
+			path = DetailTask;
+			sourceTree = "<group>";
+		};
+		44628A5C1F4C623D00FA00D1 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				44628A5D1F4C625B00FA00D1 /* NavigationBar.swift */,
+				44628A5F1F4C62BD00FA00D1 /* NavigationBar.xib */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		44628A611F4C653F00FA00D1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				44628A621F4C656C00FA00D1 /* SubViewProtocol.swift */,
+				4416E2471F4CA8D7008A1108 /* ViewAnimationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		446F7CB71F4C39E8001B6A55 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				446F7CB81F4C3A00001B6A55 /* TasksConfigurator.swift */,
+				446F7CB91F4C3A00001B6A55 /* TasksInteractor.swift */,
+				446F7CBA1F4C3A00001B6A55 /* TasksPresenter.swift */,
+				446F7CBB1F4C3A00001B6A55 /* TasksRouter.swift */,
+				446F7CBC1F4C3A00001B6A55 /* TasksViewController.swift */,
+				446F7CC61F4C3BDC001B6A55 /* TasksView.swift */,
+				4489437D1F4C536A00BF9979 /* TasksView.xib */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		44D014FC1F4DC57C009A5D61 /* DetailToDoFooter */ = {
+			isa = PBXGroup;
+			children = (
+				44D014FD1F4DC5A8009A5D61 /* DetailToDoFooter.xib */,
+				44D014FF1F4DC5C3009A5D61 /* DetailToDoFooter.swift */,
+			);
+			path = DetailToDoFooter;
+			sourceTree = "<group>";
+		};
+		44D015021F4DE4BB009A5D61 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				44D015031F4DE4DA009A5D61 /* DatePickerConfigurator.swift */,
+				44D015051F4DE4DA009A5D61 /* DatePickerPresenter.swift */,
+				44D015061F4DE4DA009A5D61 /* DatePickerRouter.swift */,
+				44D015071F4DE4DA009A5D61 /* DatePickerViewController.swift */,
+				44D0150D1F4DE51F009A5D61 /* DatePickerView.swift */,
+				44D0150F1F4DE539009A5D61 /* DatePickerView.xib */,
+				440301E31F4EB09400E32C38 /* DatePickerInteractor.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		44D015151F4E020B009A5D61 /* TaskCategories */ = {
+			isa = PBXGroup;
+			children = (
+				44D015161F4E0230009A5D61 /* TaskCategoriesConfigurator.swift */,
+				44D015171F4E0230009A5D61 /* TaskCategoriesInteractor.swift */,
+				44D015181F4E0230009A5D61 /* TaskCategoriesPresenter.swift */,
+				44D015191F4E0230009A5D61 /* TaskCategoriesRouter.swift */,
+				44D0151A1F4E0230009A5D61 /* TaskCategoriesViewController.swift */,
+				44D015201F4E026B009A5D61 /* TaskCategoriesView.swift */,
+				44D015221F4E028D009A5D61 /* TaskCategoriesView.xib */,
+			);
+			path = TaskCategories;
+			sourceTree = "<group>";
+		};
+		44D015281F4E14F2009A5D61 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				44D015291F4E150A009A5D61 /* DatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		E3B3EB91492B84A0E02E8F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5635C2C5184511C43E38EAF6 /* Pods_ToDoApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +418,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 443552961F4C357D009A0C7B /* Build configuration list for PBXNativeTarget "ToDoApp" */;
 			buildPhases = (
+				6555476721F339ECB877E0CC /* [CP] Check Pods Manifest.lock */,
 				4435527D1F4C357D009A0C7B /* Sources */,
 				4435527E1F4C357D009A0C7B /* Frameworks */,
 				4435527F1F4C357D009A0C7B /* Resources */,
+				DE60BA869BA5A05999F294B3 /* [CP] Embed Pods Frameworks */,
+				90655B1F92122528F747799B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +447,7 @@
 					443552801F4C357D009A0C7B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9LEL2WN9F8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -175,22 +475,128 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D015231F4E028D009A5D61 /* TaskCategoriesView.xib in Resources */,
+				44385CD21F4D4B3F00697708 /* TasksHeaderView.xib in Resources */,
 				443552921F4C357D009A0C7B /* LaunchScreen.storyboard in Resources */,
 				4435528F1F4C357D009A0C7B /* Assets.xcassets in Resources */,
+				4416E2461F4CA237008A1108 /* TasksCell.xib in Resources */,
+				44D014FE1F4DC5A8009A5D61 /* DetailToDoFooter.xib in Resources */,
+				440301E61F4ED87400E32C38 /* splashScreen.png in Resources */,
+				44385CE11F4D7BE900697708 /* DetailTaskView.xib in Resources */,
 				4435528A1F4C357D009A0C7B /* Main.storyboard in Resources */,
+				4489437E1F4C536A00BF9979 /* TasksView.xib in Resources */,
+				44D015101F4DE539009A5D61 /* DatePickerView.xib in Resources */,
+				44628A601F4C62BD00FA00D1 /* NavigationBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6555476721F339ECB877E0CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90655B1F92122528F747799B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE60BA869BA5A05999F294B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4435527D1F4C357D009A0C7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				443552871F4C357D009A0C7B /* ViewController.swift in Sources */,
+				44628A5E1F4C625B00FA00D1 /* NavigationBar.swift in Sources */,
+				44385CE31F4D83C900697708 /* DateExtension.swift in Sources */,
+				446F7CC31F4C3A75001B6A55 /* ViewExtension.swift in Sources */,
+				44D0151B1F4E0230009A5D61 /* TaskCategoriesConfigurator.swift in Sources */,
+				440301E41F4EB09400E32C38 /* DatePickerInteractor.swift in Sources */,
+				448943881F4C55D500BF9979 /* CGFloatExtension.swift in Sources */,
+				448943841F4C551700BF9979 /* BaseLabel.swift in Sources */,
+				448943861F4C557D00BF9979 /* FontExtension.swift in Sources */,
+				44D0150E1F4DE51F009A5D61 /* DatePickerView.swift in Sources */,
+				44385CDF1F4D7BBC00697708 /* DetailTaskView.swift in Sources */,
+				4416E25A1F4CAEBC008A1108 /* GlobalNumbers.swift in Sources */,
+				44628A631F4C656C00FA00D1 /* SubViewProtocol.swift in Sources */,
+				440301D21F4E903000E32C38 /* CategoryRequest.swift in Sources */,
+				4416E2531F4CABB9008A1108 /* UITableViewCell+Swipe.m in Sources */,
+				440301D01F4E902800E32C38 /* TaskRequest.swift in Sources */,
+				4416E2541F4CABB9008A1108 /* YMTableViewCell.m in Sources */,
+				4416E2551F4CABB9008A1108 /* YMOneButtonSwipeView.m in Sources */,
+				4416E2581F4CAC52008A1108 /* DrawCircleWithBottomAndUpperLine.swift in Sources */,
+				4416E2481F4CA8D7008A1108 /* ViewAnimationProtocol.swift in Sources */,
+				446F7CC11F4C3A00001B6A55 /* TasksViewController.swift in Sources */,
+				446F7CBE1F4C3A00001B6A55 /* TasksInteractor.swift in Sources */,
+				44D0151D1F4E0230009A5D61 /* TaskCategoriesPresenter.swift in Sources */,
+				44D0151F1F4E0230009A5D61 /* TaskCategoriesViewController.swift in Sources */,
+				44D015141F4DEEC6009A5D61 /* Transitions.swift in Sources */,
 				4435528D1F4C357D009A0C7B /* ToDoApp.xcdatamodeld in Sources */,
+				44D015211F4E026B009A5D61 /* TaskCategoriesView.swift in Sources */,
+				446F7CBF1F4C3A00001B6A55 /* TasksPresenter.swift in Sources */,
+				4416E2441F4CA215008A1108 /* TasksCell.swift in Sources */,
 				443552851F4C357D009A0C7B /* AppDelegate.swift in Sources */,
+				448943821F4C545500BF9979 /* Button.swift in Sources */,
+				44385CD01F4D4B3300697708 /* TasksHeaderView.swift in Sources */,
+				4489438A1F4C562B00BF9979 /* Appearance.swift in Sources */,
+				446F7CC01F4C3A00001B6A55 /* TasksRouter.swift in Sources */,
+				44385CDC1F4D7B8200697708 /* DetailTaskRouter.swift in Sources */,
+				4416E2561F4CABB9008A1108 /* YMTwoButtonSwipeView.m in Sources */,
+				44385CD91F4D7B8200697708 /* DetailTaskConfigurator.swift in Sources */,
+				44D015121F4DE9A2009A5D61 /* LocalizeStrings.swift in Sources */,
+				44D0151E1F4E0230009A5D61 /* TaskCategoriesRouter.swift in Sources */,
+				446F7CBD1F4C3A00001B6A55 /* TasksConfigurator.swift in Sources */,
+				44385CDB1F4D7B8200697708 /* DetailTaskPresenter.swift in Sources */,
+				44D0152A1F4E150A009A5D61 /* DatabaseManager.swift in Sources */,
+				44385CDA1F4D7B8200697708 /* DetailTaskInteractor.swift in Sources */,
+				44D0150B1F4DE4DA009A5D61 /* DatePickerRouter.swift in Sources */,
+				448943801F4C542500BF9979 /* ColorExtension.swift in Sources */,
+				44D015001F4DC5C3009A5D61 /* DetailToDoFooter.swift in Sources */,
+				44385CDD1F4D7B8200697708 /* DetailTaskViewController.swift in Sources */,
+				44D0150C1F4DE4DA009A5D61 /* DatePickerViewController.swift in Sources */,
+				44D015081F4DE4DA009A5D61 /* DatePickerConfigurator.swift in Sources */,
+				44D0151C1F4E0230009A5D61 /* TaskCategoriesInteractor.swift in Sources */,
+				44D015251F4E03D4009A5D61 /* TagView.swift in Sources */,
+				44D0150A1F4DE4DA009A5D61 /* DatePickerPresenter.swift in Sources */,
+				446F7CC71F4C3BDC001B6A55 /* TasksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -300,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -311,26 +717,33 @@
 		};
 		443552971F4C357D009A0C7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE2900F6AB91D4B4DF4F800A /* Pods-ToDoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9LEL2WN9F8;
 				INFOPLIST_FILE = ToDoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DamyanTod.ToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ToDoApp/SupportViews/SwipeableCell/ToDoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		443552981F4C357D009A0C7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0402D7F313809BFA5166E177 /* Pods-ToDoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9LEL2WN9F8;
 				INFOPLIST_FILE = ToDoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DamyanTod.ToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ToDoApp/SupportViews/SwipeableCell/ToDoApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -354,6 +767,7 @@
 				443552981F4C357D009A0C7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

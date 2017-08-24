@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fUW-PV-VK7" customClass="DetailTaskView" customModule="ToDoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-AF-WYy">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="8lb-AY-2Ky"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXY-N8-8aO">
+                    <rect key="frame" x="16" y="74" width="568" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P07-RU-DTW">
+                    <rect key="frame" x="0.0" y="112" width="600" height="132"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="132" id="9Xt-SK-ldZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AXY-N8-8aO" firstAttribute="leading" secondItem="fUW-PV-VK7" secondAttribute="leading" constant="16" id="2Fw-P1-fyD"/>
+                <constraint firstItem="P07-RU-DTW" firstAttribute="leading" secondItem="fUW-PV-VK7" secondAttribute="leading" id="4S6-nk-Gpc"/>
+                <constraint firstAttribute="trailing" secondItem="AXY-N8-8aO" secondAttribute="trailing" constant="16" id="HAP-HF-iCD"/>
+                <constraint firstAttribute="trailing" secondItem="QSG-AF-WYy" secondAttribute="trailing" id="OLd-0p-Pyh"/>
+                <constraint firstAttribute="trailing" secondItem="P07-RU-DTW" secondAttribute="trailing" id="k99-1e-FdB"/>
+                <constraint firstItem="P07-RU-DTW" firstAttribute="top" secondItem="AXY-N8-8aO" secondAttribute="bottom" constant="8" id="raU-aj-CmM"/>
+                <constraint firstItem="QSG-AF-WYy" firstAttribute="top" secondItem="fUW-PV-VK7" secondAttribute="top" id="v8s-eQ-tEP"/>
+                <constraint firstItem="AXY-N8-8aO" firstAttribute="top" secondItem="QSG-AF-WYy" secondAttribute="bottom" constant="8" id="wq8-v4-B1n"/>
+                <constraint firstItem="QSG-AF-WYy" firstAttribute="leading" secondItem="fUW-PV-VK7" secondAttribute="leading" id="wsR-ha-tBd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="footerContainer" destination="P07-RU-DTW" id="4iY-lJ-Her"/>
+                <outlet property="footerHeightConstraint" destination="9Xt-SK-ldZ" id="aNm-6D-YtA"/>
+                <outlet property="navigationBarContainer" destination="QSG-AF-WYy" id="jsz-lc-UGO"/>
+                <outlet property="titleTextField" destination="AXY-N8-8aO" id="n63-52-U5L"/>
+            </connections>
+            <point key="canvasLocation" x="-20.5" y="32.5"/>
+        </view>
+    </objects>
+</document>
