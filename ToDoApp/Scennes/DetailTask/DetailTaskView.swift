@@ -19,7 +19,7 @@ class DetailTaskView : UIView, SubViewProtocol {
     @IBOutlet weak var footerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var footerContainer: UIView!
     var footer = DetailToDoFooter.fromNib()
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -31,6 +31,7 @@ class DetailTaskView : UIView, SubViewProtocol {
         navigationBar.addLikeSubViewIn(parent: navigationBarContainer)
         navigationBar.setLeftButton(type: .back)
     }
+    
     
     func setupFooter () {
         footerHeightConstraint.constant = DetailToDoFooter.height

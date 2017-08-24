@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4416E2411F4C9AA9008A1108 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2401F4C9AA9008A1108 /* Task.swift */; };
+		440301D01F4E902800E32C38 /* TaskRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440301CF1F4E902800E32C38 /* TaskRequest.swift */; };
+		440301D21F4E903000E32C38 /* CategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440301D11F4E903000E32C38 /* CategoryRequest.swift */; };
+		440301E41F4EB09400E32C38 /* DatePickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440301E31F4EB09400E32C38 /* DatePickerInteractor.swift */; };
+		440301E61F4ED87400E32C38 /* splashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 440301E51F4ED87400E32C38 /* splashScreen.png */; };
 		4416E2441F4CA215008A1108 /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2431F4CA215008A1108 /* TasksCell.swift */; };
 		4416E2461F4CA237008A1108 /* TasksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4416E2451F4CA237008A1108 /* TasksCell.xib */; };
 		4416E2481F4CA8D7008A1108 /* ViewAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4416E2471F4CA8D7008A1108 /* ViewAnimationProtocol.swift */; };
@@ -67,13 +70,16 @@
 		44D015211F4E026B009A5D61 /* TaskCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015201F4E026B009A5D61 /* TaskCategoriesView.swift */; };
 		44D015231F4E028D009A5D61 /* TaskCategoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D015221F4E028D009A5D61 /* TaskCategoriesView.xib */; };
 		44D015251F4E03D4009A5D61 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015241F4E03D4009A5D61 /* TagView.swift */; };
-		44D015271F4E0904009A5D61 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015261F4E0904009A5D61 /* Category.swift */; };
+		44D0152A1F4E150A009A5D61 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D015291F4E150A009A5D61 /* DatabaseManager.swift */; };
 		B951CB1194D983FA3C51388F /* Pods_ToDoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5635C2C5184511C43E38EAF6 /* Pods_ToDoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0402D7F313809BFA5166E177 /* Pods-ToDoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp.release.xcconfig"; sourceTree = "<group>"; };
-		4416E2401F4C9AA9008A1108 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		440301CF1F4E902800E32C38 /* TaskRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRequest.swift; sourceTree = "<group>"; };
+		440301D11F4E903000E32C38 /* CategoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRequest.swift; sourceTree = "<group>"; };
+		440301E31F4EB09400E32C38 /* DatePickerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerInteractor.swift; sourceTree = "<group>"; };
+		440301E51F4ED87400E32C38 /* splashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreen.png; sourceTree = "<group>"; };
 		4416E2431F4CA215008A1108 /* TasksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
 		4416E2451F4CA237008A1108 /* TasksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasksCell.xib; sourceTree = "<group>"; };
 		4416E2471F4CA8D7008A1108 /* ViewAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationProtocol.swift; sourceTree = "<group>"; };
@@ -140,7 +146,7 @@
 		44D015201F4E026B009A5D61 /* TaskCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCategoriesView.swift; sourceTree = "<group>"; };
 		44D015221F4E028D009A5D61 /* TaskCategoriesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskCategoriesView.xib; sourceTree = "<group>"; };
 		44D015241F4E03D4009A5D61 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
-		44D015261F4E0904009A5D61 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		44D015291F4E150A009A5D61 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		5635C2C5184511C43E38EAF6 /* Pods_ToDoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2900F6AB91D4B4DF4F800A /* Pods-ToDoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoApp/Pods-ToDoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +218,7 @@
 		443552831F4C357D009A0C7B /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				44D015281F4E14F2009A5D61 /* Database */,
 				44628A611F4C653F00FA00D1 /* Protocols */,
 				4435529E1F4C364C009A0C7B /* Extensions */,
 				4435529D1F4C3629009A0C7B /* SupportViews */,
@@ -230,6 +237,7 @@
 				443552841F4C357D009A0C7B /* AppDelegate.swift */,
 				4435528E1F4C357D009A0C7B /* Assets.xcassets */,
 				443552901F4C357D009A0C7B /* LaunchScreen.storyboard */,
+				440301E51F4ED87400E32C38 /* splashScreen.png */,
 				443552931F4C357D009A0C7B /* Info.plist */,
 				4435528B1F4C357D009A0C7B /* ToDoApp.xcdatamodeld */,
 				448943891F4C562B00BF9979 /* Appearance.swift */,
@@ -261,8 +269,8 @@
 		4435529C1F4C360F009A0C7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4416E2401F4C9AA9008A1108 /* Task.swift */,
-				44D015261F4E0904009A5D61 /* Category.swift */,
+				440301CF1F4E902800E32C38 /* TaskRequest.swift */,
+				440301D11F4E903000E32C38 /* CategoryRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,6 +376,7 @@
 				44D015071F4DE4DA009A5D61 /* DatePickerViewController.swift */,
 				44D0150D1F4DE51F009A5D61 /* DatePickerView.swift */,
 				44D0150F1F4DE539009A5D61 /* DatePickerView.xib */,
+				440301E31F4EB09400E32C38 /* DatePickerInteractor.swift */,
 			);
 			path = DatePicker;
 			sourceTree = "<group>";
@@ -384,6 +393,14 @@
 				44D015221F4E028D009A5D61 /* TaskCategoriesView.xib */,
 			);
 			path = TaskCategories;
+			sourceTree = "<group>";
+		};
+		44D015281F4E14F2009A5D61 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				44D015291F4E150A009A5D61 /* DatabaseManager.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		E3B3EB91492B84A0E02E8F86 /* Frameworks */ = {
@@ -464,6 +481,7 @@
 				4435528F1F4C357D009A0C7B /* Assets.xcassets in Resources */,
 				4416E2461F4CA237008A1108 /* TasksCell.xib in Resources */,
 				44D014FE1F4DC5A8009A5D61 /* DetailToDoFooter.xib in Resources */,
+				440301E61F4ED87400E32C38 /* splashScreen.png in Resources */,
 				44385CE11F4D7BE900697708 /* DetailTaskView.xib in Resources */,
 				4435528A1F4C357D009A0C7B /* Main.storyboard in Resources */,
 				4489437E1F4C536A00BF9979 /* TasksView.xib in Resources */,
@@ -531,6 +549,7 @@
 				44385CE31F4D83C900697708 /* DateExtension.swift in Sources */,
 				446F7CC31F4C3A75001B6A55 /* ViewExtension.swift in Sources */,
 				44D0151B1F4E0230009A5D61 /* TaskCategoriesConfigurator.swift in Sources */,
+				440301E41F4EB09400E32C38 /* DatePickerInteractor.swift in Sources */,
 				448943881F4C55D500BF9979 /* CGFloatExtension.swift in Sources */,
 				448943841F4C551700BF9979 /* BaseLabel.swift in Sources */,
 				448943861F4C557D00BF9979 /* FontExtension.swift in Sources */,
@@ -538,12 +557,13 @@
 				44385CDF1F4D7BBC00697708 /* DetailTaskView.swift in Sources */,
 				4416E25A1F4CAEBC008A1108 /* GlobalNumbers.swift in Sources */,
 				44628A631F4C656C00FA00D1 /* SubViewProtocol.swift in Sources */,
+				440301D21F4E903000E32C38 /* CategoryRequest.swift in Sources */,
 				4416E2531F4CABB9008A1108 /* UITableViewCell+Swipe.m in Sources */,
+				440301D01F4E902800E32C38 /* TaskRequest.swift in Sources */,
 				4416E2541F4CABB9008A1108 /* YMTableViewCell.m in Sources */,
 				4416E2551F4CABB9008A1108 /* YMOneButtonSwipeView.m in Sources */,
 				4416E2581F4CAC52008A1108 /* DrawCircleWithBottomAndUpperLine.swift in Sources */,
 				4416E2481F4CA8D7008A1108 /* ViewAnimationProtocol.swift in Sources */,
-				4416E2411F4C9AA9008A1108 /* Task.swift in Sources */,
 				446F7CC11F4C3A00001B6A55 /* TasksViewController.swift in Sources */,
 				446F7CBE1F4C3A00001B6A55 /* TasksInteractor.swift in Sources */,
 				44D0151D1F4E0230009A5D61 /* TaskCategoriesPresenter.swift in Sources */,
@@ -565,10 +585,10 @@
 				44D0151E1F4E0230009A5D61 /* TaskCategoriesRouter.swift in Sources */,
 				446F7CBD1F4C3A00001B6A55 /* TasksConfigurator.swift in Sources */,
 				44385CDB1F4D7B8200697708 /* DetailTaskPresenter.swift in Sources */,
+				44D0152A1F4E150A009A5D61 /* DatabaseManager.swift in Sources */,
 				44385CDA1F4D7B8200697708 /* DetailTaskInteractor.swift in Sources */,
 				44D0150B1F4DE4DA009A5D61 /* DatePickerRouter.swift in Sources */,
 				448943801F4C542500BF9979 /* ColorExtension.swift in Sources */,
-				44D015271F4E0904009A5D61 /* Category.swift in Sources */,
 				44D015001F4DC5C3009A5D61 /* DetailToDoFooter.swift in Sources */,
 				44385CDD1F4D7B8200697708 /* DetailTaskViewController.swift in Sources */,
 				44D0150C1F4DE4DA009A5D61 /* DatePickerViewController.swift in Sources */,
@@ -642,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -686,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

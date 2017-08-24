@@ -46,23 +46,12 @@
                         <constraint firstAttribute="height" constant="66" id="qms-GF-3b2"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LG-fd-PJa" customClass="Button" customModule="ToDoApp" customModuleProvider="target">
-                    <rect key="frame" x="138" y="525" width="100" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="JSv-OA-3iR"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="pDZ-Lb-x8E"/>
-                    </constraints>
-                    <state key="normal">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="8aO-Az-h2D" firstAttribute="top" secondItem="FaI-TO-qbN" secondAttribute="top" id="08h-aF-jWm"/>
                 <constraint firstItem="uhi-J0-UEY" firstAttribute="centerX" secondItem="FaI-TO-qbN" secondAttribute="centerX" id="0Vh-5j-ov2"/>
                 <constraint firstItem="KWc-hD-TtK" firstAttribute="leading" secondItem="FaI-TO-qbN" secondAttribute="leading" constant="16" id="C4E-KC-kgI"/>
-                <constraint firstItem="4LG-fd-PJa" firstAttribute="centerX" secondItem="FaI-TO-qbN" secondAttribute="centerX" id="FYv-XJ-eKj"/>
                 <constraint firstItem="uhi-J0-UEY" firstAttribute="top" secondItem="Bwt-ep-Utm" secondAttribute="bottom" id="IuJ-cl-6nH"/>
                 <constraint firstAttribute="trailing" secondItem="8aO-Az-h2D" secondAttribute="trailing" id="Jxm-cz-OdU"/>
                 <constraint firstAttribute="trailing" secondItem="Bwt-ep-Utm" secondAttribute="trailing" constant="16" id="MMh-SJ-Wgz"/>
@@ -71,11 +60,9 @@
                 <constraint firstItem="8aO-Az-h2D" firstAttribute="leading" secondItem="FaI-TO-qbN" secondAttribute="leading" id="Qrk-tg-E8Y"/>
                 <constraint firstItem="Bwt-ep-Utm" firstAttribute="leading" secondItem="KWc-hD-TtK" secondAttribute="trailing" constant="8" id="dYd-pG-aAG"/>
                 <constraint firstItem="uhi-J0-UEY" firstAttribute="top" secondItem="KWc-hD-TtK" secondAttribute="bottom" id="eHU-0J-2OA"/>
-                <constraint firstItem="4LG-fd-PJa" firstAttribute="top" secondItem="uhi-J0-UEY" secondAttribute="bottom" constant="20" id="pZK-ef-UmT"/>
                 <constraint firstItem="uhi-J0-UEY" firstAttribute="leading" secondItem="FaI-TO-qbN" secondAttribute="leading" constant="16" id="vwr-OF-XqW"/>
             </constraints>
             <connections>
-                <outlet property="applyButton" destination="4LG-fd-PJa" id="Fqk-5E-Zpq"/>
                 <outlet property="datePicker" destination="uhi-J0-UEY" id="Lg2-q7-MOX"/>
                 <outlet property="navigationBarContainer" destination="8aO-Az-h2D" id="cLo-h8-zVg"/>
                 <outlet property="startsDateLabel" destination="Bwt-ep-Utm" id="4yb-nV-bwE"/>

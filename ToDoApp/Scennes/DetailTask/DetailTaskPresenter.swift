@@ -10,9 +10,11 @@ import Foundation
 
 protocol DetailTaskPresenterInput: class {
     func backButtonPressed()
-    func createTask()
     func navigateToDatePicker()
     func navigateToCategories()
+    func deletePressed()
+    func updateTask(color : String)
+    func updateTask(title : String)
 }
 
 class DetailTaskPresenter: DetailTaskPresenterInput, DetailTaskInteractorOutput {
@@ -29,12 +31,27 @@ class DetailTaskPresenter: DetailTaskPresenterInput, DetailTaskInteractorOutput 
             }
         }
     }
+    
+    var taskRequest:TaskRequest? = TaskRequest(title: "", categories: "", categoryColor: HexColors.defaultDarkGreenColor, completionDate: NSDate(), isDone: false)
 
     required init(with interactor: DetailTaskInteractorInput, router: DetailTaskRouterInput) {
         self.interactor = interactor
         self.router = router
     }
     
+}
+
+//MARK: Interactor Output 
+extension DetailTaskPresenter {
+    func taskDeleted() {
+        router.navigateToPreviousController()
+    }
+    func taskUpdated() {
+        view?.taskColorUpdated(color: task?.color)
+    }
+    func presentNewTask(task: Task) {
+        self.task = task
+    }
 }
 
 //MARK: View inputs
@@ -44,16 +61,47 @@ extension DetailTaskPresenter {
     }
     
     func navigateToDatePicker() {
+        createTask()
         router.navigateToDatePicker(task)
     }
     
     func navigateToCategories() {
+        createTask()
         router.navigateToCategories(task)
     }
     
-    func createTask() {
-        if task == nil {
-            task = Task(title: "", categories: "", categoryColor: HexColors.defaultDarkGreenColor, completionDate: Date(), isDone: false)
+    fileprivate func createTask() {
+        if let taskRequest = taskRequest,
+            task == nil {
+            interactor.createTask(taskRequest)
+            self.taskRequest = nil
         }
+    }
+    func deletePressed() {
+        guard let task = task else {
+            router.navigateToPreviousController()
+            return
+        }
+        interactor.deleteTask(task)
+        router.navigateToPreviousController()
+    }
+    
+    func updateTask(color: String) {
+        guard let task = task else {
+            taskRequest?.categoryColor = color
+            createTask()
+            return
+        }
+        task.color = color
+        view?.populateViews(task: task)
+    }
+    
+    func updateTask(title: String) {
+        guard let task = task else {
+            taskRequest?.title = title
+            createTask()
+            return
+        }
+        task.title = title
     }
 }

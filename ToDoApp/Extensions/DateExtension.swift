@@ -8,13 +8,13 @@
 
 import Foundation
 
-extension Date {
+extension NSDate {
     
     func getUserLocalDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
-        return dateFormatter.string(from: self)
+        return dateFormatter.string(from: self as Date)
     }
     
 }

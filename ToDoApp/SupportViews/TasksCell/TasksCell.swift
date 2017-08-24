@@ -15,7 +15,7 @@ protocol TasksCellProtocol {
     func setTitle(title:String)
     func setCategories(categories:String)
     func setDate(date:String)
-    func setColor(color:String)
+    func setColor(color:String?)
     func displayBottomLine(isNeeded : Bool)
     func displayUpperLine(isNeeded : Bool)
     func displayItem(state : CircleState)
@@ -46,7 +46,8 @@ class TasksCell: YMTableViewCell {
 
 //MARK: Public methods
 extension TasksCell: TasksCellProtocol {
-    internal func setColor(color: String) {
+    internal func setColor(color: String?) {
+        
         let color = UIColor.colorWithHexString(hex: color)
         
         for view in categoryIndicatiors {

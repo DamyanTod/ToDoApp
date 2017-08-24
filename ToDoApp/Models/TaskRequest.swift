@@ -8,15 +8,25 @@
 
 import Foundation
 
-class Task {
+extension Task {
+    func getCategoriesAsArray () -> [String]? {
+        if let categories = categories,
+            categories != "" {
+            return categories.components(separatedBy: ", ")
+        }
+        return nil
+    }
+}
+
+class TaskRequest {
     
     var title: String
     var categories: String
     var categoryColor: String
-    var completionDate: Date
+    var completionDate: NSDate
     var isDone : Bool
     
-    init(title : String, categories : String , categoryColor: String , completionDate : Date, isDone : Bool) {
+    init(title : String, categories : String , categoryColor: String , completionDate : NSDate, isDone : Bool) {
         self.title = title
         self.categories = categories
         self.categoryColor = categoryColor

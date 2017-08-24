@@ -10,6 +10,8 @@ import Foundation
 
 protocol TaskCategoriesPresenterInput: class {
     func navigateToPreviousController()
+    func updateCategories(_ editedItems : [String])
+    func updateTask(categories: String)
 }
 
 class TaskCategoriesPresenter: TaskCategoriesPresenterInput, TaskCategoriesInteractorOutput {
@@ -20,14 +22,20 @@ class TaskCategoriesPresenter: TaskCategoriesPresenterInput, TaskCategoriesInter
     var router: TaskCategoriesRouterInput
     
     var task:Task?
-
-    required init(with interactor: TaskCategoriesInteractorInput, router: TaskCategoriesRouterInput) {
-        
-        self.interactor = interactor
-        self.router = router
-        
+    
+    var categories:[Category]? {
+        return interactor.getCategories()
     }
 
+    required init(with interactor: TaskCategoriesInteractorInput, router: TaskCategoriesRouterInput) {
+        self.interactor = interactor
+        self.router = router
+    }
+
+}
+//MARK: Interactor response 
+extension TaskCategoriesPresenter {
+    
 }
 
 //MARK: View inputs
@@ -35,6 +43,17 @@ class TaskCategoriesPresenter: TaskCategoriesPresenterInput, TaskCategoriesInter
 extension TaskCategoriesPresenter {
     func navigateToPreviousController() {
         router.navigateToPreviusController()
+    }
+    
+    func updateCategories(_ editedItems: [String]) {
+        interactor.updateCategories(editedItems)
+    }
+    
+    func updateTask(categories: String) {
+        guard let task = task else {
+            return
+        }
+        task.categories = categories
     }
     
 }

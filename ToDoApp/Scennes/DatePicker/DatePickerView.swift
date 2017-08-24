@@ -15,7 +15,6 @@ class DatePickerView: UIView, SubViewProtocol {
     let navigationBar = NavigationBar.fromNib()
     
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var applyButton: Button!
     @IBOutlet weak var startsDateLabel: BaseLabel!
     @IBOutlet weak var startsInfoLabel: BaseLabel!
     
@@ -31,10 +30,7 @@ class DatePickerView: UIView, SubViewProtocol {
     }
     
     private func setupButtons () {
-    
         navigationBar.setLeftButton(type: .back)
-        applyButton.setButtonAppearance(type: .positiveAnswerButton, text: LocalizedStrings.kApply)
-    
     }
     
 }

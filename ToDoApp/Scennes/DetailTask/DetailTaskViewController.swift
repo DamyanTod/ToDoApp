@@ -11,6 +11,7 @@ import UIKit
 
 protocol DetailTaskViewControllerInput: class {
     func populateViews(task: Task)
+    func taskColorUpdated(color : String?)
 }
 
 class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput {
@@ -43,12 +44,23 @@ class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput 
         contentView.addLikeSubViewIn(parent: self.view)
         addTargets()
         showDeleteButtonIfNeeded()
-        presenter.createTask()
+        addDelegates()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let task = presenter.task {
+            populateViews(task: task)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         contentView.setupFooter()
+    }
+    
+    private func addDelegates() {
+        contentView.titleTextField.delegate = self
     }
     
     private func addTargets () {
@@ -60,7 +72,7 @@ class DetailTaskViewController: UIViewController, DetailTaskViewControllerInput 
         contentView.footer.categoriesBtn.addTarget(self, action: #selector(categoriesButtonPressed), for: .touchUpInside)
     }
     
-    private func showDeleteButtonIfNeeded() {
+    fileprivate func showDeleteButtonIfNeeded() {
         if presenter.task != nil {
             contentView.showDeleteButton()
             contentView.navigationBar.rightSideRightButton.addTarget(self, action: #selector(deleteButtonPressed), for: .touchUpInside)
@@ -74,8 +86,13 @@ extension DetailTaskViewController {
     func populateViews(task: Task) {
         contentView.titleTextField.text = task.title
         contentView.footer.categoriesBtn.setTitle(task.categories, for: .normal)
-        contentView.footer.timeBtn.setTitle(task.completionDate.getUserLocalDate(), for: .normal)
-        contentView.footer.indicatorColorView.backgroundColor = UIColor.colorWithHexString(hex: task.categoryColor)
+        contentView.footer.timeBtn.setTitle(task.completionDate?.getUserLocalDate(), for: .normal)
+        contentView.footer.indicatorColorView.backgroundColor = UIColor.colorWithHexString(hex: task.color)
+        showDeleteButtonIfNeeded()
+    }
+    
+    func taskColorUpdated (color : String?) {
+        contentView.footer.indicatorColorView.backgroundColor = UIColor.colorWithHexString(hex: color)
     }
 }
 
@@ -87,7 +104,7 @@ extension DetailTaskViewController {
     }
     
     @IBAction func deleteButtonPressed (sender: UIButton) {
-        //TODO: CoreDate implementation
+        presenter.deletePressed()
     }
     
     @IBAction func timeButtonPressed (sender: UIButton) {
@@ -99,14 +116,22 @@ extension DetailTaskViewController {
     }
     
     @IBAction func colorButtonPressed (sender: UIButton) {
-        //TODO: need to be updated Core data
-        guard let task = presenter.task else {
-            return
-        }
-        task.categoryColor = contentView.footer.colors[sender.tag]
-        contentView.footer.indicatorColorView.backgroundColor = UIColor.colorWithHexString(hex: task.categoryColor)
+        presenter.updateTask(color : contentView.footer.colors[sender.tag])
+    }
+
+}
+
+//MARK: Textfield delegates
+extension DetailTaskViewController : UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        presenter.updateTask(title : textField.text!)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 
