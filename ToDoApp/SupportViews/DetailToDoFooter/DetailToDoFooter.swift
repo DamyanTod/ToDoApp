@@ -34,7 +34,7 @@ class DetailToDoFooter : UIView, SubViewProtocol {
     private func setupBtns () {
         timeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
         categoriesBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
-        timeBtn.setTitle(Date().getUserLocalDate() , for: .normal)
+        timeBtn.setTitle(NSDate().getUserLocalDate() , for: .normal)
         categoriesBtn.setTitle("do", for: .normal)
 
         makeCircleView(view: indicatorColorView, hexColor: colors[0])

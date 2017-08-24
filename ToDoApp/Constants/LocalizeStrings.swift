@@ -11,6 +11,7 @@ import Foundation
 struct LocalizedStrings {
     static let kApply = NSLocalizedString("Apply", comment: "")
     static let kStarts = NSLocalizedString("Starts:", comment: "")
+    static let kCreate = NSLocalizedString("Create", comment: "")
     
     static let kCall = NSLocalizedString("call", comment: "")
     static let kCheck = NSLocalizedString("check", comment: "")

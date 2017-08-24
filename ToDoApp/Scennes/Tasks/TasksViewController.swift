@@ -20,6 +20,8 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
     
     fileprivate var contentView = TasksView.fromNib()
     
+    fileprivate var isViewLoadedBefore = false
+    
     // MARK: - Object lifecycle
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,7 +43,7 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         contentView.addLikeSubViewIn(parent: self.view)
         setupDelegates()
         addTargets()
@@ -50,7 +52,12 @@ class TasksViewController: UIViewController, TasksViewControllerInput {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        contentView.tasksTableView.reloadData()
+        
+        if isViewLoadedBefore {
+            filterTasks(status: contentView.tableViewHeader.getStatus())
+        }
+        isViewLoadedBefore = true
+        
     }
     
     private func setupDelegates () {
@@ -163,10 +170,12 @@ extension TasksViewController : YMTableViewCellDelegate {
                 presenter.removeItem(indexpath.row)
             }
         } else if index == YMTableViewCellTwoButtonSwipeViewShareButtonIndex {
-            //TODO: Share
+            ///TODO: Share
+            ///We can easy share tasks with hiperlinks
             print("share")
         } else if index == YMTableViewCellTwoButtonSwipeViewUndoButtonIndex {
-            //TODO: show time changing screen
+            ///TODO: show time changing screen
+            ///We can show the date controller from here
             print("show time changing screen")
         }
     }

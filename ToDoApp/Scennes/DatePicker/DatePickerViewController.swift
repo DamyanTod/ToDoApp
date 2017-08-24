@@ -19,8 +19,6 @@ class DatePickerViewController: UIViewController, DatePickerViewControllerInput 
     
     fileprivate var contentView = DatePickerView.fromNib()
     
-    fileprivate var userChosenDate:Date?
-    
     // MARK: - Object lifecycle
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -49,7 +47,6 @@ class DatePickerViewController: UIViewController, DatePickerViewControllerInput 
     private func addTargets () {
         contentView.datePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
         contentView.navigationBar.leftSideLeftButton.addTarget(self, action: #selector(backButtonPressed), for: .touchDown)
-        contentView.applyButton.addTarget(self, action: #selector(applyButtonPressed), for: .touchDown)
     }
     
 
@@ -58,7 +55,7 @@ class DatePickerViewController: UIViewController, DatePickerViewControllerInput 
 //MARK: Public methods
 extension DatePickerViewController {
     func populateView(task: Task) {
-        contentView.startsDateLabel.text = task.completionDate.getUserLocalDate()
+        contentView.startsDateLabel.text = task.completionDate?.getUserLocalDate()
     }
 }
 
@@ -69,17 +66,12 @@ extension DatePickerViewController {
         presenter.navigateToPreviousController()
     }
     
-    @IBAction func applyButtonPressed (sender: UIButton) {
-        
-        //TODO: need to be updated in Core Data
-        if let date = userChosenDate {
-            presenter.task?.completionDate = date
-        }
-    }
-    
     @IBAction func datePickerChanged (sender: UIDatePicker) {
-        userChosenDate = sender.date
-        contentView.startsDateLabel.text = sender.date.getUserLocalDate()
+        if let date = sender.date as NSDate? {
+            presenter?.updateTask(date: date)
+            contentView.startsDateLabel.text = date.getUserLocalDate()
+        }
+        
     }
     
 }

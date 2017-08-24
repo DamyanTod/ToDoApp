@@ -21,7 +21,7 @@ class TasksView: UIView, SubViewProtocol {
         super.awakeFromNib()
         
         setupNavigationBar()
-        setUpTableView()
+         setUpTableView()
     }
     
     private func setupNavigationBar () {
@@ -31,11 +31,9 @@ class TasksView: UIView, SubViewProtocol {
     }
     
     private func setUpTableView() {
-        
         tasksTableView.register(UINib(nibName: TasksCell.nibName , bundle: nil), forCellReuseIdentifier: TasksCell.nibName)
         tasksTableView.tableFooterView = UIView(frame: CGRect.zero)
         tasksTableView.separatorStyle = .none
         tasksTableView.rowHeight = UITableViewAutomaticDimension
-        
     }
 }

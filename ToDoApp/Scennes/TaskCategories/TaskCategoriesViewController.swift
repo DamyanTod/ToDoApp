@@ -50,7 +50,9 @@ class TaskCategoriesViewController: UIViewController, TaskCategoriesViewControll
         super.viewDidAppear(animated)
         contentView.configurateCategoriesView()
         setDelegates()
-        displayTags(Category.getCategories())
+        if let categories = presenter.categories {
+            displayTags(categories)
+        }
     }
     
     private func addTargets() {
@@ -66,13 +68,12 @@ class TaskCategoriesViewController: UIViewController, TaskCategoriesViewControll
         contentView.displayTagsLabel.text = presenter.task?.categories
     }
 
-    
 }
 
 //MARK: Public methods 
 extension TaskCategoriesViewController {
     func displayTags(_ categories: [Category]) {
-        contentView.addTagsViews(categories: categories ,selected: presenter.task?.getCategoriesAsArray())
+        contentView.addTagsViews(categories: categories, selected: presenter.task?.getCategoriesAsArray())
     }
 }
 
@@ -84,7 +85,6 @@ extension TaskCategoriesViewController {
     }
     
     @IBAction func editButtonPressed (sender : UIButton) {
-        //TODO: need to edit Core Data
         contentView.categoriesView?.enableEdit = (contentView.categoriesView?.enableEdit)! ? false : true
         if (contentView.categoriesView?.enableEdit)! {
             contentView.categoriesView?.onTapAddButton(sender: (contentView.categoriesView?._addButton)!)
@@ -102,16 +102,14 @@ extension TaskCategoriesViewController: TagViewDelegate {
     }
     
     func getTagValuesAfterEdit(editedItems: [String]) {
-        //presenter.updateTags(editedItems)
+        presenter.updateCategories(editedItems)
     }
     
     func itemPressed(pressedItems: [String]) {
         let pressedItems = pressedItems.map({ $0 }).joined(separator: ", ")
         contentView.displayTagsLabel.text = pressedItems
-        presenter.task?.categories = pressedItems
-        //presenter.updateTask(task , desc: pressedItems)
+        presenter.updateTask(categories: pressedItems)
     }
-    
     
 }
 

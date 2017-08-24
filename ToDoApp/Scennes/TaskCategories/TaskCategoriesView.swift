@@ -50,7 +50,7 @@ extension TaskCategoriesView {
                     }
                 }
             }
-            categoriesView!.addTag(tagString: category.name, tagId: category.id , isSelected: selectedItem)
+            categoriesView!.addTag(tagString: category.name!, tagId: 0, isSelected: selectedItem)
             selectedItem = false
         }
     }

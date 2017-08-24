@@ -9,16 +9,24 @@
 import Foundation
 
 protocol TaskCategoriesInteractorInput {
-    
+    func updateCategories(_ editedItems : [String])
+    func getCategories() -> [Category]?
 }
 
 protocol TaskCategoriesInteractorOutput: class {
-    
+
 }
 
 class TaskCategoriesInteractor: TaskCategoriesInteractorInput {
     
     var output: TaskCategoriesInteractorOutput?
     
-
+    func updateCategories(_ editedItems: [String]) {
+        DatabaseManager.shared.updateCategories(categories: editedItems)
+    }
+    
+    func getCategories() -> [Category]? {
+        return DatabaseManager.shared.getCategories()
+    }
+    
 }

@@ -15,9 +15,11 @@ class DatePickerConfigurator {
     class func configure(viewController: DatePickerViewController) {
         
         let router = DatePickerRouter()
-        let presenter = DatePickerPresenter(router: router)
+        let interactor = DatePickerInteractor()
+        let presenter = DatePickerPresenter(with: interactor, router: router)
         presenter.view = viewController
         
+        interactor.output = presenter
         router.viewController = viewController
         viewController.presenter = presenter
     }

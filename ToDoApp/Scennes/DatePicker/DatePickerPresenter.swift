@@ -10,12 +10,14 @@ import Foundation
 
 protocol DatePickerPresenterInput: class {
     func navigateToPreviousController()
+    func updateTask(date : NSDate)
 }
 
-class DatePickerPresenter: DatePickerPresenterInput {
+class DatePickerPresenter: DatePickerPresenterInput,DatePickerInteractorOutput {
     
     weak var view: DatePickerViewControllerInput?
     
+    var interactor: DatePickerInteractorInput
     var router: DatePickerRouterInput
     
     var task: Task? {
@@ -26,9 +28,9 @@ class DatePickerPresenter: DatePickerPresenterInput {
         }
     }
 
-    required init(router: DatePickerRouterInput) {
+    required init(with interactor: DatePickerInteractorInput,router: DatePickerRouterInput) {
         self.router = router
-        
+        self.interactor = interactor
     }
 
 }
@@ -37,5 +39,11 @@ class DatePickerPresenter: DatePickerPresenterInput {
 extension DatePickerPresenter {
     func navigateToPreviousController() {
         router.navigateToPreviousController()
+    }
+    
+    func updateTask(date: NSDate) {
+        if let task = task {
+            task.completionDate = date
+        }
     }
 }
